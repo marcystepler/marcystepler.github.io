@@ -1,0 +1,78 @@
+<manifest alg="2" build="2015.2.1.352" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="w955730o.beget.tech" resolutions="1x,2x" timestamp="1478276803120">
+  <folder name="css">
+    <file name="site_global.css" crc="398299528"/>
+    <file name="index.css" crc="33807697" ref="index"/>
+    <file name="nomq_index.css" crc="464421246" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="169078940" ref="index"/>
+    <file name="museutils.js" crc="3851988764" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="4242129463" ref="index"/>
+    <file name="webpro.js" crc="4067903014" ref="index"/>
+    <file name="musewpslideshow.js" crc="4265225696" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="4075157096" ref="index"/>
+    <file name="touchswipe.js" crc="474750357" ref="index"/>
+    <file name="jquery.watch.js" crc="3842844514" ref="index"/>
+    <file name="jquery.museresponsive.js" crc="516761069" ref="index"/>
+    <file name="require.js" crc="4108833657" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="bkg_01.jpg" crc="3950303660" seo="true" ref="index"/>
+    <file name="blank.gif" crc="4208392903" ref="index"/>
+    <file name="loading.gif" crc="3815509949" ref="index"/>
+    <file name="icons-02129x124.jpg" crc="408531878" seo="true" ref="index"/>
+    <file name="icons-02129x124_2x.jpg" crc="3966741370" seo="true" ref="index"/>
+    <file name="icons-03130x125.jpg" crc="362314575" seo="true" ref="index"/>
+    <file name="icons-03130x125_2x.jpg" crc="61358755" seo="true" ref="index"/>
+    <file name="icons-04129x125.jpg" crc="147366448" seo="true" ref="index"/>
+    <file name="icons-04129x125_2x.jpg" crc="2500469" seo="true" ref="index"/>
+    <file name="gallery_08342x342.jpg" crc="3772014181" seo="true" ref="index"/>
+    <file name="untitled-1342x342.jpg" crc="4217392004" seo="true" ref="index"/>
+    <file name="untitled-1342x342_2x.jpg" crc="224930668" seo="true" ref="index"/>
+    <file name="u23724.png" crc="38292875" ref="index"/>
+    <file name="u23724_2x.png" crc="4214535855" ref="index"/>
+    <file name="u23724-r.png" crc="223669113" ref="index"/>
+    <file name="u23724-r_2x.png" crc="3820575492" ref="index"/>
+    <file name="icons-02146x140.jpg" crc="477476951" seo="true" ref="index"/>
+    <file name="icons-02146x140_2x.jpg" crc="416337353" seo="true" ref="index"/>
+    <file name="icons-03146x140.jpg" crc="4165186924" seo="true" ref="index"/>
+    <file name="icons-03146x140_2x.jpg" crc="4200040364" seo="true" ref="index"/>
+    <file name="icons-04146x141.jpg" crc="4240493421" seo="true" ref="index"/>
+    <file name="icons-04146x141_2x.jpg" crc="184047621" seo="true" ref="index"/>
+    <file name="gallery_08519x519.jpg" crc="3855441435" seo="true" ref="index"/>
+    <file name="untitled-1515x515.jpg" crc="4103289139" seo="true" ref="index"/>
+    <file name="untitled-1515x515_2x.jpg" crc="4151010454" seo="true" ref="index"/>
+    <file name="u237242.png" crc="38292875" ref="index"/>
+    <file name="u23724_2x2.png" crc="4214535855" ref="index"/>
+    <file name="u23724-r2.png" crc="223669113" ref="index"/>
+    <file name="u23724-r_2x2.png" crc="3820575492" ref="index"/>
+    <file name="icons-02.jpg" crc="30451228" seo="true" ref="index"/>
+    <file name="icons-02_2x.jpg" crc="248849303" seo="true" ref="index"/>
+    <file name="icons-03.jpg" crc="4040335414" seo="true" ref="index"/>
+    <file name="icons-03_2x.jpg" crc="526606530" seo="true" ref="index"/>
+    <file name="icons-04.jpg" crc="293110521" seo="true" ref="index"/>
+    <file name="icons-04_2x.jpg" crc="313749666" seo="true" ref="index"/>
+    <file name="gallery_08.jpg" crc="311087236" seo="true" ref="index"/>
+    <file name="untitled-1.jpg" crc="28411451" seo="true" ref="index"/>
+    <file name="untitled-1_2x.jpg" crc="4279338695" seo="true" ref="index"/>
+    <file name="u237243.png" crc="38292875" ref="index"/>
+    <file name="u23724_2x3.png" crc="4214535855" ref="index"/>
+    <file name="u23724-r3.png" crc="223669113" ref="index"/>
+    <file name="u23724-r_2x3.png" crc="3820575492" ref="index"/>
+    <file name="icons-0291x87.jpg" crc="522151061" seo="true" ref="index"/>
+    <file name="icons-0291x87_2x.jpg" crc="143900426" seo="true" ref="index"/>
+    <file name="icons-0387x84.jpg" crc="4013890579" seo="true" ref="index"/>
+    <file name="icons-0387x84_2x.jpg" crc="4166333779" seo="true" ref="index"/>
+    <file name="icons-0488x84.jpg" crc="4181870648" seo="true" ref="index"/>
+    <file name="icons-0488x84_2x.jpg" crc="4209161536" seo="true" ref="index"/>
+    <file name="gallery_08463x463.jpg" crc="285901074" seo="true" ref="index"/>
+    <file name="untitled-1458x458.jpg" crc="4201800033" seo="true" ref="index"/>
+    <file name="untitled-1458x458_2x.jpg" crc="3266034" seo="true" ref="index"/>
+    <file name="u237244.png" crc="38292875" ref="index"/>
+    <file name="u23724_2x4.png" crc="4214535855" ref="index"/>
+    <file name="u23724-r4.png" crc="223669113" ref="index"/>
+    <file name="u23724-r_2x4.png" crc="3820575492" ref="index"/>
+  </folder>
+  <file name="index.html" crc="410856189" seo="true" mt="1478267910790" redirect="true"/>
+</manifest>
