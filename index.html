@@ -1,0 +1,615 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<base href="">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+	<title>Congratulations!</title>
+
+
+<script src="js/device.js"></script>
+
+<!-- user's city script start-->
+
+<script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+      jQuery("#user-city").text(ymaps.geolocation.city);
+  }
+</script>
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=en" type="text/javascript"></script> 
+
+<!-- user's city script finish -->
+
+<!-- timer script start -->
+
+<script type="text/javascript">
+	//<![CDATA[
+	setInterval('countdown()',1000);
+	function countdown(){
+	var secs = parseInt(document.getElementById("hsecs").innerHTML);
+	if(secs!=0){nsecs = secs - 1;}
+	else if(secs==0){nsecs = secs;}
+	document.getElementById("hsecs").innerHTML = nsecs;
+	if(nsecs < 10) nsecs = "0" + nsecs;
+	document.getElementById("secs").innerHTML = nsecs;
+}
+//]]>
+	
+</script>
+
+<!-- timer script finish -->
+
+<!-- congratulations alert script start -->
+<script>
+    var warning = function() {
+          
+    alert ("Congratulations!\n\n"+"You won a $300 Walmart Grocery Coupon!\n \nClick ok to claim it now!");
+    }
+    setTimeout(warning, 1000);
+    //play notification
+    if (window.navigator && window.navigator.vibrate) {
+    // Vibrate once for 1 second
+    navigator.vibrate(1000);
+    //wait 1 second than display warning
+    } else {
+       	// Stop vibrating
+        navigator.vibrate(0);
+        }
+</script>
+
+<!-- congratulations alert script finish -->
+
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+
+	<script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+	<div class="header">
+		<table border="0px" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<img src="images/fb1.png"></td>
+
+					<td>
+						<img src="images/fb2.png"></td>
+
+					<td>
+						<img src="images/fb3.png"></td>
+
+					<td>
+						<img src="images/fb4.png"></td>
+
+					<td>
+						<img src="images/fb5.png"></td>
+
+					<td>
+						<img src="images/fb6.png"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="container">
+		<div class="contestwrap">
+			<div class="toptext">
+				<center>
+					<table>
+						<tbody>
+							<tr>
+								<th> <b><font color="#3c599b">Congratulations, you are the lucky winner of the day!</font></b> 
+								</th>
+							</tr>
+							<tr>
+								<td align="center"> 
+									<font color="#9fa2a6" size="2px">
+
+										<script>
+										<!--
+										
+										// Array of day names
+										  var dayNames = new Array("sunday","monday","tuesday","wednesday",
+										  "thursday","ftiday","satueday");
+										
+										// Array of month Names
+										  var monthNames = new Array(
+										  "january","february","march","april","may","june","july",
+										  "august","september","october","november","décember");
+										
+										  var now = new Date();
+										  document.write(dayNames[now.getDay()]);
+										
+										// --> 
+										</script>
+
+										<script>
+										
+										  var mydate=new Date()
+										  mydate.setDate(mydate.getDate()-0);
+										  var year=mydate.getYear()
+										  if (year < 1000)
+										  year+=1900
+										  var day=mydate.getDay()
+										  var month=mydate.getMonth()
+										  var daym=mydate.getDate()
+										  if (daym<10)
+										  daym="0"+daym
+										  var dayarray=new Array("sunday","monday","tuesday","wednesday", "thursday","ftiday","satueday")
+										  var montharray=new Array("january","february","march","april","may","june","july", "august","september","october","november","décember")
+										  document.write(""+montharray[month]+" "+daym+"")
+										
+										</script>
+
+									</font>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</center>
+
+				<p>Every
+			<span id="day"></span>
+			<script>
+			<!--
+			
+			// Array of day names
+			  var dayNames = new Array("sunday","monday","tuesday","wednesday",
+			  "thursday","ftiday","satueday");
+			
+			  var now = new Date();
+			  document.write(dayNames[now.getDay()]);
+			
+			// --> 
+			</script>
+
+
+
+			we select a random user of a  
+		<span class="device">
+
+			<script>
+			if(device.ios()) document.write('iOS');
+			if(device.ipad()) document.write('ipad');
+			if(device.iphone()) document.write('iphone');
+			if(device.ipod()) document.write('ipod');
+			if(device.android()) document.write('android');
+			if(device.windows()) document.write('Windows');
+			if(device.blackberry()) document.write('blackberry');
+			if(device.fxos()) document.write('Fxos');
+			</script>
+
+		</span>
+ 		from 
+ 		<span id="user-city" class="city"></span> 
+ 		to receive a special award from our sponsors, to thank you for being a loyal customer.
+					
+
+
+					<strong>
+					<br>
+					<br>You are the lucky winner of the day!</strong>
+					<br>
+					<br>
+					<strong>Comment:</strong>
+					These exclusive prices are limited and can be withdrawn at any time, so it is important to act quickly.
+					<br></p>
+			</div>
+
+
+
+
+
+			<div class="clear"></div>
+		</div>
+		<div class="select">
+			You have
+			<font color="red">
+				<b>
+					<!-- <span id="mins"></span> -->
+					<span id="hsecs">60</span>
+					seconds
+				</b>
+			</font> 
+			to select a price below or your place can be given to someone else
+		</div>
+
+		<div class="content">
+			<!--A1-->
+			<div class="item itemA">
+				<div class="left">
+					<a href="http://go.finding-best-deal.com/click">
+						<img class="img" src="images/iphone6.jpg">
+					</a>
+					<div class="clear"></div>
+					<div class="lightblue2">2 remain</div>
+				</div>
+				<div class="right">
+					<div class="track">
+						<a href="http://go.finding-best-deal.com/click">iPhone 7</a>
+					</div>
+
+					<div class="secondary">
+						<div class="rating">
+							iPhone 7 4.7 "(11.9 cm) resolution of 8 megapixel HD video recording 1080p memory 64 GB
+						</div>
+					</div>
+					<div class="secondary">
+						<div class="rating">
+							<span class="lightblue">Regular price : €699</span>
+						</div>
+					</div>
+					<div class="secondary">
+						<div class="rating">
+							<span class="lightblue">
+								Your price :
+								<font color="green">€0.00</font>
+							</span>
+						</div>
+					</div>
+					<div class="secondary">
+						<div class="rating">
+							<span class="lightblue">Delivery: €0.00</span>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div>
+						<a target="_top" class="button" href="http://go.finding-best-deal.com/click">CHOOSE</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<!--Out of Stock-->
+			<div class="item">
+				<div class="left">
+					<a href="http://go.finding-best-deal.com/click">
+						<img class="img" src="images/walmart.png"></a>
+					<div class="clear"></div>
+					<div class="lightblue2">1 remain</div>
+
+				</div>
+				<div class="right">
+					<div class="track">
+						<a href="http://go.finding-best-deal.com/click">Walmart Gift Cards</a>
+					</div>
+					<div class="secondary">
+						<div class="rating"></div>
+					</div>
+
+					<div class="secondary">
+						<div class="rating">
+							<span class="lightblue">Regular price: $200+</span>
+						</div>
+					</div>
+					<div class="secondary">
+						<div class="rating">
+							<span class="lightblue">
+								Your price :
+								<font color="green">€0.00</font>
+							</span>
+						</div>
+					</div>
+					<div class="secondary">
+						<div class="rating">
+							<span class="lightblue">Delivery: €0.00</span>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div>
+						<a class="button" href="http://go.finding-best-deal.com/click">CHOOSE</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<!--Out of Stock-->
+			<div class="item">
+				<div class="left">
+					<a onclick="alert('OUT OF STOCK!\n\nPlease choose another price.')">
+						<img class="img" src="images/appleipadair.jpg"></a>
+					<div class="clear"></div>
+					<div class="lightblue2">0 remain</div>
+
+				</div>
+				<div class="right">
+					<div class="track">
+						<a onclick="alert('OUT OF STOCK!\n\nPlease choose another price.')">iPad Air 2</a>
+					</div>
+					<div class="secondary">
+						<div class="rating">9.7 "(24.6 cm) 16GB Retina Display</div>
+					</div>
+
+					<div class="secondary">
+						<div class="rating">
+							<span class="lightblue">Regular price: € 499</span>
+						</div>
+					</div>
+					<div class="secondary">
+						<div class="rating">
+							<span class="lightblue">
+								Your price :
+								<font color="green">€0.00</font>
+							</span>
+						</div>
+					</div>
+					<div class="secondary">
+						<div class="rating">
+							<span class="lightblue">Delivery: €1.00</span>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div>
+						<a class="button1" onclick="alert('OUT OF STOCK!\n\nPlease choose another price.')">0 REMAIN</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		</div>
+
+		<!--COMMENTS -->
+
+		<div class="comments">
+			<font face="arial">
+				<center>
+					<font color="000">
+						<strong>COMMENTS</strong>
+					</font> 
+					<table style="padding-top: 10px; font-size: 13px;" border="0" cellpadding="4" cellspacing="0" width="100%">
+						<tbody>
+							<tr>
+								<td align="right" valign="top" width="50">
+									<img src="images/comment1.jpg"></td>
+								<td align="left" valign="top">
+									<div style="font-weight: bold; color: rgb(59, 89, 152);">Tomas</div>
+									<div style="padding-top: 5px;">
+										My iPhone arrived in the mail
+today !! I already have an iPhone 6 but I will resell it on eBay
+Hahah Thank you guys !!
+									</div>
+									<div style="padding-top: 5px; color: rgb(156, 156, 156); font-size: 11px;">
+										<script>document.write(""+montharray[month]+" "+daym+"")</script>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr></td>
+							</tr>
+							<tr>
+								<td align="right" valign="top" width="50">
+									<img src="images/m2.jpg"></td>
+								<td align="left" valign="top">
+									<div style="font-weight: bold; color: rgb(59, 89, 152);">Olivier</div>
+									<div style="padding-top: 5px;">
+										At first, I thought it was a
+Joke, but my iPad 2 Air has actually arrived in the mail this
+  Morning #legit and nothing is going to stop me from registering to win ALL
+These prices, I have also done mdr
+									</div>
+									<div style="padding-top: 5px; color: rgb(156, 156, 156); font-size: 11px;">
+										
+
+										<script>
+
+										var mydate=new Date()
+										mydate.setDate(mydate.getDate()-1);
+										var year=mydate.getYear()
+										if (year < 1000)
+										year+=1900
+										var day=mydate.getDay()
+										var month=mydate.getMonth()
+										var daym=mydate.getDate()
+										if (daym<10)
+										daym="0"+daym
+										var dayarray=new Array("sunday","monday","tuesday","wednesday", "thursday","ftiday","satueday")
+										var montharray=new Array("january","february","march","april","may","june","july", "august","september","october","november","décember")
+										document.write(""+montharray[month]+" "+daym+"")
+
+										</script>
+
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<hr></td>
+							</tr>
+							<tr>
+								<td align="right" valign="top" width="50">
+									<img src="images/m3.jpg"></td>
+								<td align="left" valign="top">
+									<div style="font-weight: bold; color: rgb(59, 89, 152);">Laura</div>
+									<div style="padding-top: 5px;">
+										Omd my friend said it's like this
+That he had his free iPad, but I did not believe it. I just
+Sign up for $ 1. I will post a message to tell you more
+events
+									</div>
+									<div style="padding-top: 5px; color: rgb(156, 156, 156); font-size: 11px;">
+										<script>document.write(""+montharray[month]+" "+daym+"")</script>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr></td>
+							</tr>
+							<tr>
+								<td align="right" valign="top" width="50">
+									<img src="images/f3.jpg"></td>
+								<td align="left" valign="top">
+									<div style="font-weight: bold; color: rgb(59, 89, 152);">Julie</div>
+									<div style="padding-top: 5px;">
+										Haha ouah .. my friend just bought a
+IPhone for $ 699. I'll stab the knife in the wound. Is it
+  That someone has received one?
+									</div>
+									<div style="padding-top: 5px; color: rgb(156, 156, 156); font-size: 11px;">
+										<script>document.write(""+montharray[month]+" "+daym+"")</script>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr></td>
+							</tr>
+							<tr>
+								<td align="right" valign="top" width="50">
+									<img src="images/f4.jpg"></td>
+								<td align="left" valign="top">
+									<div style="font-weight: bold; color: rgb(59, 89, 152);">Mary</div>
+									<div style="padding-top: 5px;">
+										I did not know if it was legal or not but I received my iphone today. Thanks guys !
+									</div>
+									<div style="padding-top: 5px; color: rgb(156, 156, 156); font-size: 11px;">
+
+										<script>
+
+										var mydate=new Date()
+										mydate.setDate(mydate.getDate()-2);
+										var year=mydate.getYear()
+										if (year < 1000)
+										year+=1900
+										var day=mydate.getDay()
+										var month=mydate.getMonth()
+										var daym=mydate.getDate()
+										if (daym<10)
+										daym="0"+daym
+										var dayarray=new Array("sunday","monday","tuesday","wednesday", "thursday","ftiday","satueday")
+										var montharray=new Array("january","february","march","april","may","june","july", "august","september","october","november","décember")
+										document.write(""+montharray[month]+" "+daym+"")
+
+										</script>
+
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr></td>
+							</tr>
+
+							<tr>
+								<td align="right" valign="top" width="50">
+									<img src="images/f5.jpg"></td>
+								<td align="left" valign="top">
+									<div style="font-weight: bold; color: rgb(59, 89, 152);">Sarah</div>
+									<div style="padding-top: 5px;">It was so easy to have a free Ipad ... mdr</div>
+									<div style="padding-top: 5px; color: rgb(156, 156, 156); font-size: 11px;">
+										<script>document.write(""+montharray[month]+" "+daym+"")</script>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr></td>
+							</tr>
+							<tr>
+								<td align="right" valign="top" width="50">
+									<img src="images/m1.jpg"></td>
+								<td align="left" valign="top">
+									<div style="font-weight: bold; color: rgb(59, 89, 152);">Alexander</div>
+									<div style="padding-top: 5px;">
+										I received an iPhone 6 and I made a surprise to my wife (she was angry at me because I had missed our MDR birthday) I also received an iPhone 6 for me ... sorry If I took the last one
+									</div>
+									<div style="padding-top: 5px; color: rgb(156, 156, 156); font-size: 11px;">
+
+										<script>
+
+										var mydate=new Date()
+										mydate.setDate(mydate.getDate()-3);
+										var year=mydate.getYear()
+										if (year < 1000)
+										year+=1900
+										var day=mydate.getDay()
+										var month=mydate.getMonth()
+										var daym=mydate.getDate()
+										if (daym<10)
+										daym="0"+daym
+										var dayarray=new Array("sunday","monday","tuesday","wednesday", "thursday","ftiday","satueday")
+										var montharray=new Array("january","february","march","april","may","june","july", "august","september","october","november","décember")
+										document.write(""+montharray[month]+" "+daym+"")
+
+										</script>
+
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td colspan="2">
+									<hr></td>
+							</tr>
+							<tr>
+								<td align="right" valign="top" width="50">
+									<img src="images/goprogirl.png"></td>
+								<td align="left" valign="top">
+									<div style="font-weight: bold; color: rgb(59, 89, 152);">Camille</div>
+									<div style="padding-top: 5px;">
+										It's incredible ! I've never won anything, but today, I'm so lucky !! The iPhone 6!
+									</div>
+									<img src="images/appletest.jpg">
+									<div style="padding-top: 5px; color: rgb(156, 156, 156); font-size: 11px;">
+										
+										<script>
+
+										var mydate=new Date()
+										mydate.setDate(mydate.getDate()-4);
+										var year=mydate.getYear()
+										if (year < 1000)
+										year+=1900
+										var day=mydate.getDay()
+										var month=mydate.getMonth()
+										var daym=mydate.getDate()
+										if (daym<10)
+										daym="0"+daym
+										var dayarray=new Array("sunday","monday","tuesday","wednesday", "thursday","ftiday","satueday")
+										var montharray=new Array("january","february","march","april","may","june","july", "august","september","october","november","december")
+										document.write(""+montharray[month]+" "+daym+"")
+
+
+										</script>
+
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr></td>
+							</tr>
+						</tbody>
+					</table>
+					<div style="padding-top: 0px;">Submit your comment:</div>
+					<div class="addCommentBox">
+						<textarea name="comment" class="commentTextBox"></textarea>
+						<br>
+						<input onclick="javascript: comment();" value="Comment" type="button"></div>
+				</center>
+			</font>
+		</div>
+		<font face="arial"></font>
+	</div>
+	<div class="header" style="background: transparent none repeat scroll 0% 0%; border-top: 0px solid rgb(51, 51, 51); padding-top: 15px;"></div>
+
+	<!--exit A -->
+<!-- 	<script language="JavaScript" type="text/javascript">
+function exit_a1() {alert('Claim your price:\n\nSTEP 1: Please indicate on the following page the delivery address of your prize!\n\nSTEP 2: After filling in your contact information, pay 1 € to win your prize. STEP 3: Click on the link Confirmation in the e-mail message you will receive.');}
+</script>
+
+	<script language="JavaScript" type="text/javascript">
+function exit_a3() {alert('Claim your price:\n\nSTEP 1: Please enter your phone number on the next page to win your prize.\n\nSTEP 2: Enter the PIN you will receive by SMS or simply click the Confirm button.');}
+</script> -->
+
+
+</body>
+</html>
