@@ -14,17 +14,6 @@
 
 <script src="js/device.js"></script>
 
-<!-- user's city script start-->
-
-<script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript">
-  window.onload = function () {
-      jQuery("#user-city").text(ymaps.geolocation.city);
-  }
-</script>
-<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=en" type="text/javascript"></script> 
-
-<!-- user's city script finish -->
 
 <!-- timer script start -->
 
@@ -188,6 +177,20 @@
 
 		</span>
  		from 
+					
+		<!-- user's city script start-->
+
+<script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+      jQuery("#user-city").text(ymaps.geolocation.city);
+  }
+</script>
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=en" type="text/javascript"></script> 
+
+<!-- user's city script finish -->			
+					
+					
  		<span id="user-city" class="city"></span> 
  		to receive a special award from our sponsors, to thank you for being a loyal customer.
 					
