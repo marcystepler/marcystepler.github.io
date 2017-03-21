@@ -25,10 +25,12 @@ a{
     text-decoration: none;
 }
 .button_continue a{
+  outline:none;
   color:#2BA3E2;
 }
 
 button{
+  outline:none;
     border:none;
     background-color: #fff;
 }
