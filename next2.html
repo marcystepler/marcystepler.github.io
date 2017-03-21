@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Shopping_cart</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+         
+        
+
+    <div class="header_mobile step3">
+        <img src="images/logo.png" alt="" class="logo">
+        <h2 class="name">Payment</h2>
+        <div class="divide"></div>
+    </div>
+        
+        <div class="container">
+        <div class="header">
+            <img src="images/logo.png" alt="" class="logo">
+        </div>
+        <div class="items pay_items">
+            <div class="content">
+                <img src="images/steps3.png" alt="" class="steps">
+                   <div class="steps_text">
+                        <p class="st0">Your cart</p>
+                        <p class="st0">Contact</p>
+                        <p class="st2">Payment</p>
+                    </div>
+                    
+                <div class="check_card">
+                <div class="block_check">   
+                    <div class="box_radio">
+                        <div class="pre_rad">
+                                <img src="images/pay_pal.png" alt="" class="credit_img">
+                            <input id="tab1" type="radio" name="kind_card">
+                                <p class="name_c name">Pay width 
+                                    <span>PayPal</span>
+                                </p>
+                            </div>
+                        <div class="pre_rad">
+                                    <img src="images/cards.png" alt="" class="credit_img">
+                            <input id = "tab2" type="radio" name="kind_card" checked>
+                                <p class="name_c name">Pay width 
+                                    <span>Credit Card</span>
+                                </p>
+                            </div>
+                    </div>
+                    
+                        
+                        
+                        
+                        <div class="forma_card">
+
+                            <section id="credit_card" class="">
+                            <form action="" id="card-form" method="POST">
+                            <div class="input-fields-container">
+                                <div id="cc-number-container" class="cc-generic">
+                        
+                			        <input type="text" id="cc-number" placeholder="Card Number" class="cc-input" />
+                       
+                        
+                          
+                                    <div class="images_card">
+                                       <img class="visa" src="images/visa.png" alt="">
+                                       <img class="b_visa" src="images/b_visa.png" alt="">
+                                       <img class="exp" src="images/express.png" alt="">
+                                       <img class="b_exp" src="images/b_express.png" alt="">
+                                       <img class="dis" src="images/discover.png" alt="">
+                                       <img class="b_dis" src="images/b_discover.png" alt="">
+                                       <img class="mas" src="images/master.png" alt="">
+                                       <img class="b_mas" src="images/b_master.png" alt="">
+                                    </div>
+                                   </div> <!-- end cc-number-container -->
+                                <div id="cc-name-container" class="input_name">
+
+                                    <input type="text" id="cc-name" placeholder="Name on Card" class="cc-input" />
+
+                                </div> <!-- end cc-number-container -->
+
+                              <div class="forma_bottom">
+
+                                <div id="cc-cvv-container" class="input_cvv">
+
+                                    <input type="text" id="cc-cvv" placeholder="CVC/CVV" class="cc-input" />
+
+                                </div>
+
+                                <div id="cc-expiration-date-container" class="input_date">
+                                    <label for="cc-expiration-date">Expiration:</label>
+
+                                   <input type="text" id="cc-expiration-date" placeholder="MM / YYYY" class="cc-input" />
+
+                                </div>
+
+                            </div>
+                            </div> 
+                            <!-- end input-fields-container -->
+                        </form>
+                    </section>
+                    
+                    <section id="paypal" class="">
+                    
+                    </section>
+                    </div>
+                    </div><!-- //end block check -->
+            
+                        <div class="sum_mobile">  
+                <p class="total_sum_mobile"> Total:&nbsp;<span> $107</span></p>
+                <div class=but_group>   
+                        <button class="blue_back button button_continue"><a href="next1.html"><img src="images/left_arrow.png " alt=""></a> </button>
+                        <button class="button_next button button_checkout"><a href="next3.html">continue</a><span><img src="images/arow.png" alt=""> </span> </button>
+                </div>
+       </div>
+              
+                <div class="divide_gr"> </div>
+
+                
+                  <div class="icon_sidebar">
+                            <div class="icon_bloc">
+                                <img src="images/pig3.png" alt="" class="icon">
+                                <p class="name_icon p_pig">60 Day Money-back
+<br>Guarantee</p>
+                            </div>
+                            <div class="icon_bloc">
+                                <img src="images/lock.png" alt="" class="icon">
+                                <p class="name_icon">Your Information
+<br>Is Safe</p>
+                            </div>
+                            <div class="icon_bloc">
+                                <img src="images/guard.png" alt="" class="icon">
+                                <p class="name_icon">Secure Checkout</p>
+                            </div>
+                        </div>
+                        </div>
+                <div class="divide_gr"> </div>
+
+
+                        <div class="sum_mobile">  
+                <p class="total_sum_mobile"> Total:&nbsp;<span> $107</span></p>
+                <div class=but_group>   
+                        <button class="blue_back button button_continue"><a href="next1.html"><img src="images/left_arrow.png " alt=""></a> </button>
+                        <button class="button_next button button_checkout"><a href="next3.html">continue</a><span><img src="images/arow.png" alt=""> </span> </button>
+                </div>
+       </div>
+              
+                <div class="two_button">
+                    <button class="button_continue button button_back"><a href="next1.html">Back</a></button>
+                 <a href="next3.html" id="submit-payment" class="disabled"><button class="button_next button_place button">Place order <span><img src="images/arow.png" alt=""> </span> </button></a>
+                </div>
+            </div> 
+        </div>
+    </div>  
+    <script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery.inputmask.bundle.js"></script>
+	<script src="js/script.js"></script>   
+</body>
+</html>
