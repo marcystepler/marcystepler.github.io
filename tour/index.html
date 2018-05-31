@@ -12,11 +12,7 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/form.css">
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+
 
 </head>
 
@@ -754,14 +750,25 @@
 		</p>
 	</footer>
 
-	<script>
+	
+
+<div id="back-top"><a href="#top"><i class="fa fa-arrow-circle-up"></i></a></div>
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
     	var $page = $('html, body');
-		$('a[href*="#"]').click(function() {
+
+		$('a[href="#top"]').click(function() {
 		    $page.animate({
 		        scrollTop: $($.attr(this, 'href')).offset().top
 		    }, 1000);
 		    return false;
 		});
+
 		$(document).ready(function(){
 	// появление/затухание кнопки #back-top
 	$(function (){
@@ -785,7 +792,5 @@
 		});
 	});
     </script>
-
-<div id="back-top"><a href="#top"><i class="fa fa-arrow-circle-up"></i></a></div>
 </body>
 </html>
