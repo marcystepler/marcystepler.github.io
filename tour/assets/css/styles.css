@@ -135,12 +135,12 @@ ul.grid{
 	justify-content: center;
 }
 .red_text{
-	color:red;
+	color:#A01A33;
 	text-align: center;
 	font-weight: 600;
 }
 .blue_text{
-	color:blue;
+	color:#4E8098;
 }
 h4.hotel{
 	margin-top:15px;
@@ -250,13 +250,15 @@ header nav li:last-child{
 }
 .hero h1 i,
 .hero h1 span{
-	color:red;
+	color:#a01a33;
 }
 
 .hero h3{
-	font: normal 28px 'Open Sans', sans-serif;
+	font: normal 36px 'Open Sans', sans-serif;
 	margin-bottom: 40px;
-	text-shadow:4px 4px 4px #000;
+	text-shadow:2px 2px 2px #000;
+	/*color:#000;*/
+	font-weight: 700;
 }
 
 .hero a.btn{
@@ -296,6 +298,7 @@ header nav li:last-child{
 -----------------------*/
 .introduce{
 	padding-top: 80px;
+	background-color: #f7f7f7;
 }
 .flex_wrapper{
 	align-items: flex-start;
@@ -347,6 +350,24 @@ header nav li:last-child{
 	}
 
 }
+/*---------------------
+ 	10 reasons Section
+-----------------------*/
+.reasons{
+	background-color: #fff;
+}
+.reasons ul{
+	max-width: 800px;
+	width: 100%;
+	list-style: decimal;
+}
+.reasons ul li{
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+
 /*----------------
  	Days Section
 ----------------*/
@@ -463,18 +484,23 @@ header nav li:last-child{
 .schedule_prime{
 	background-color: #f7f7f7;
 }
+.option_day a.remove,
 .option_day a.choose,
 .schedule_prime a.choose{
 	height: 50px;
 	width:160px;
+	letter-spacing: 1.5px;
+	justify-content: center;
 	border-radius: 3px;
 	box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
 	text-align: center;
 	line-height: 50px;
-	background-color: red;
+	background-color: #A01A33;
 	color:#fff;
-	transition: all ease-in-out 0.2s;
+	opacity: 1;
+	transition: all ease-in-out 1.5s;
 }
+
 .option_day a.choose:hover,
 .schedule_prime a.choose:hover{
 	height: 55px;
@@ -499,8 +525,9 @@ header nav li:last-child{
 	background-color: #fff;
 }
 .option_day .flex_wrapper{
-	justify-content: center;
-	width:100%;
+	justify-content: space-between;
+	max-width:840px;
+	width: 100%;
 }
 .option_day .option{
 	display: flex;
@@ -511,7 +538,6 @@ header nav li:last-child{
 	padding: 30px 10px;
 	width: 400px;
 	height: 400px;
-	margin-right: 20px;
 	transition: all ease-in-out 0.2s;
 }
 .option_day .option a{
@@ -530,6 +556,7 @@ header nav li:last-child{
 	padding: 40px 20px;
 	height: 420px;
 	margin-top: -10px;
+	margin-bottom: -10px;
 }
 .option_day .option:hover a{
 	height: 45px;
@@ -553,15 +580,48 @@ ul.price_list li{
 	text-align: left;
 	margin-bottom: 15px;
 }
+.option_day a.remove,
 .option_day a.choose{
 	margin-top: 50px;
-	width: 200px;
+	width: 240px;
+	transition: all 0.2s ease;
 }
+.option_day a.remove:hover,
 .option_day a.choose:hover{
 	margin-top: 47.5px;
 	margin-bottom: -2.5px;
-	width: 220px;
+	width: 260px;
+	transition: all 0.2s ease;
 }
+.option_day a.remove{
+	margin-top: 30px;
+	background-color: #a01a33;
+}
+.option_day a.remove:hover{
+	margin-top: 0;
+}
+.hide{
+	display: none;
+	opacity: 0;
+}
+.show{
+	display:flex;
+	opacity: 1;
+}
+.pay_text{
+	background-color: #CDFFC6;
+	justify-content: space-around;
+	flex-direction:column;
+	align-items: center;
+	max-width: 840px;
+	width: 100%;
+	height: 240px;
+	padding: 40px 40px;
+	text-align: center;
+	margin-top: 50px;
+	box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
 
 @media (max-width: 800px){
 	.option_day .option{
@@ -761,9 +821,34 @@ ul.price_list li{
 
 }
 
+/*-------------
+ 	PAY FORM
+-------------*/
+ 
+#preorder_basic .stripe-button-el,
+#preorder_full .stripe-button-el
+{
+	width:200px;
+	border-radius: 0;
+	border:0;
+	outline: none;
+}
 
+#preorder_basic .stripe-button-el span,
+#preorder_full .stripe-button-el span{
+	background-color: #4E8098;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	text-shadow: none;
+	color: #fff;
+	border:0;
+	outline: none;
 
-
+	height: 50px;
+	line-height: 50px;
+	background-image: none;
+	border-radius: 0;
+}
 /*-------------
  	Footer
 -------------*/

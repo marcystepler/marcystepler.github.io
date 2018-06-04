@@ -34,7 +34,7 @@
 		<h3 class="title">2018 Discover China Tour</h3>
 
 		<div class="flex_wrapper">
-			<img src="assets/img/erica-min.jpg" alt="" class="photo">
+			<img src="assets/img/erica.jpg" alt="" class="photo">
 			
 			<div class="introduce_text">
 				
@@ -93,6 +93,31 @@
 					allowing me to show you my country!</p>
 			</div>
 			<!-- end of introduce text -->
+		</div>
+		<!-- end of flex wrapper -->
+	</section>
+	<!-- end of introduce section -->
+
+
+
+	<section class="reasons">
+
+		<h3 class="title">10 reeasons to travel with Erica</h3>
+
+		<div class="flex_wrapper">
+
+		<ul>
+			<li>Erica grew up and lived in China for 22 years, she knows the city inside and out.</li>
+			<li>Erica speaks fluent Chinese be able to communicate with local people on your behalf whenever you need to, no language barrier.</li>
+			<li>Erica’s network connections is so widely developed in every area, she’s able to get all the special treatment everywhere you go.</li>
+			<li>Erica can find the best local restaurants and unique dining experience you won’t find elsewhere, like dinning in a Chinese traditional palace with ancient beauties serving food. She knows how to get the extra add ons, unique shows, events from local venues.</li>
+			<li> Erica is teamed up with local professional photographers you will get un-forgettable moments captured on sites create the most memorable trip of your dream.</li>
+			<li>Erica is teamed up with the most famous and single largest private travel agency in China with over 4000 employees also is the first and only travel service in China to own its own airline that has 37 years of experience taking care of foreign travelers.</li>
+			<li> Erica is done all the homework on market research on first time visiting in China and hand selected the best hotels, site seeing venues, places of interests and designed the most unique travel literary for you.</li>
+			<li>Erica deeply cares about your travel experience, she will be your personal tour guide, lead you in every steps ensure the most fun and memorable experience for you.</li>
+			<li> Erica knows how to handle emergency situations, because of the network support, she’s able to take care of any scenario the situation. So you have peace in mind you are always safe with our tour group.</li>
+			<li>Erica is confident to offer 100% satisfaction guaranteed for the value and experience of your trip. If you are not happy with the level of service we are providing, we’ll refund your service charge back.</li>
+		</ul>
 		</div>
 		<!-- end of flex wrapper -->
 	</section>
@@ -501,11 +526,11 @@
 
 		<h3 class="title wow flipInX">Beijing – Xian – Shanghai Land Price:</h3>
 			<p class="margin_clear">Total with China domestic air: 
-				<span class="red_text">$XXXX</span> per person
+				<span class="red_text">$3697</span> per person
 			</p>
 
 			<p>Single Room Supplement: 
-				<span class="red_text">$XXXX</span>
+				<span class="red_text">$1250</span>
 			</p>
 
 		<div class="flex_wrapper">
@@ -674,11 +699,11 @@
 
 		<h3 class="title wow flipInX">Extension trip to Yiwu Price:</h3>
 			<p class="margin_clear">Quote:
-				<span class="red_text">$XXX</span> per person
+				<span class="red_text">$550</span> per person
 			</p>
 
 			<p>Single Room Supplement: 
-				<span class="red_text">$XXX</span>
+				<span class="red_text">$160</span>
 			</p>
 
 		<div class="flex_wrapper">
@@ -715,25 +740,65 @@
 
 		</div>
 
-		<a href="" class="choose" id="add_extension_button">ADD TO MY TRIP</a>
+		<a class="choose show" id="add_extension_button">ADD TO MY TRIP</a>
+		<!-- add extension button -->
 
-
+		<p id="after_pay_text" class="hide pay_text">
+			<i class="fa fa-check-circle" style="font-size:48px;color:#a01a33;"></i>
+			Cool! You are going to see Yiwu!
+			<a class="remove" id="remove_extension_button">REMOVE EXTENSION</a>
+		</p>
+		<!-- after paid text block -->
 	</section>
 	<!-- end of option day -->
 
 
-	<section id="preorder" class="contact">
-		<h2>Here will be pay form</h2>
+	<section id="preorder_basic" class="show contact">
+		<h3 class="title wow flipInX">You are going to paid</h3>
+			<p class="margin_clear">
+				<span class="red_text">$3697</span>
+			</p>
+
+		<form action="/charge" method="POST">
+	  		<script
+	    		src="https://checkout.stripe.com/checkout.js"
+	    		class="stripe-button"
+	    		data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+	    		data-image="/square-image.png"
+	    		data-name="Demo Site"
+				data-description="1 widget ($20.00)"
+	    		data-amount="2000">
+	  		</script>
+		</form>
+		<!-- stripe FORM ends -->
+
 	</section>
+	<!-- end of preorder section with first variant of form -->
+
+
+	<section id="preorder_full" class="hide contact">
+		<h3 class="title wow flipInX">You are going to paid</h3>
+			<p class="margin_clear">
+				<span class="red_text">$4147</span>
+			</p>
+
+		<form action="/charge" method="POST">
+	  		<script
+	    		src="https://checkout.stripe.com/checkout.js"
+	    		class="stripe-button"
+	    		data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+	    		data-image="/square-image.png"
+	    		data-name="Demo Site"
+				data-description="1 widget ($40.00)"
+	    		data-amount="4000">
+	  		</script>
+		</form>
+		<!-- stripe FORM ends -->
+
+	</section>
+	<!-- end of preorder section with first variant of form -->
 
 	<footer>
-	<!-- 	<ul>
-			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-github-square""></i></a></li>
-		</ul> -->
 			<p>748 Parkside Drive</p>
 			<p>Woodstock, GA 30188</p>
 			<p>Email: michael@sino-american.marketing</p>
@@ -745,46 +810,17 @@
 
 	
 
-<div id="back-top"><a href="#top"><i class="fa fa-arrow-circle-up"></i></a></div>
+<div id="back-top">
+	<a href="#top">
+		<i class="fa fa-arrow-circle-up"></i>
+	</a>
+</div>
 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src='assets/js/script.js'></script>
     <script src="assets/js/wow.min.js"></script>
     <script>
         new WOW().init();
-    </script>
-    <script>
-    	var $page = $('html, body');
-
-		$('a[href="#top"]').click(function() {
-		    $page.animate({
-		        scrollTop: $($.attr(this, 'href')).offset().top
-		    }, 1000);
-		    return false;
-		});
-
-		$(document).ready(function(){
-	// появление/затухание кнопки #back-top
-	$(function (){
-		// прячем кнопку #back-top
-		$("#back-top").hide();
-			$(window).scroll(function (){
-				if ($(this).scrollTop() > 100){
-					$("#back-top").fadeIn();
-				} else{
-					$("#back-top").fadeOut();
-				}
-			});
-
-			// при клике на ссылку плавно поднимаемся вверх
-			$("#back-top a").click(function (){
-				$("body,html").animate({
-					scrollTop:0
-				}, 800);
-				return false;
-			});
-		});
-	});
     </script>
 </body>
 </html>
