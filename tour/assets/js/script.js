@@ -20,7 +20,7 @@ var choosen_option = 0;
 var auto_price = 0;
 
 let option_price_array = [3694, 4944, 4247, 4797];
-let auto_price_array = [1232, 1644, 1415, 1000];
+let auto_price_array = [1232, 1644, 1415, 1599];
 
 
 let span_price = document.getElementById('auto_price');
