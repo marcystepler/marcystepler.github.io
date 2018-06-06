@@ -484,8 +484,10 @@ header nav li:last-child{
 .schedule_prime{
 	background-color: #f7f7f7;
 }
+button.choose,
 a.remove,
 a.choose{
+	border: none;
 	height: 50px;
 	width:160px;
 	letter-spacing: 1.5px;
@@ -877,7 +879,7 @@ section.tab-content{
 
 .tab_container [id^="tab"]:checked + label {
   background: #fff;
-  box-shadow: inset 0 3px #0CE;
+  box-shadow: inset 0 3px #4E8098;
 }
 
 #preorder_basic input[id^="tab"] {
@@ -928,11 +930,10 @@ section.tab-content{
 	margin-top: 20px;
 	align-self: center;
 }
-span#auto_price,
-span#total{
+.money_text{
 	color: #A01A33;
-	font-weight: 500;
-	font-size: 18px;
+	font-weight: 700;
+	font-size: 24px;
 }
 
 .option_wrap{
@@ -942,9 +943,102 @@ span#total{
 	font-style: italic;
 	text-align: right;
 }
+
+/*CUSTOM CHEKBOXES GOES HERE*/
+
+#content1 .option_wrap,
+#content2 .option_wrap{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#content2 .option_wrap input,
+#content1 .option_wrap input{
+	position: absolute;
+  	opacity: 0;
+  	cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+/* On mouse-over, add a grey background color */
+#content1 .option_wrap:hover input ~ .checkmark,
+#content2 .option_wrap:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+#content1 .option_wrap input:checked ~ .checkmark,
+#content2 .option_wrap input:checked ~ .checkmark {
+  background-color: #4E8098;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+#content1 .option_wrap input:checked ~ .checkmark:after,
+#content2 .option_wrap input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+#content1 .option_wrap .checkmark:after,
+#content2 .option_wrap .checkmark:after
+ {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#content2 span.price,
+#content1 span.price{
+	font-weight: 700;
+}
+p.title{
+	font-size:24px;
+	text-align: center;
+	width:100%;
+	margin-bottom: 10px;
+}
 /*tabs content ends here*/
 
 
+/*payform itself*/
+
+.payform{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.payform input{
+	visibility: hidden;
+}
 /*Media query*/
 @media only screen and (max-width: 930px) {
  #preorder_basic  label span {
@@ -956,7 +1050,7 @@ span#total{
 }
 
 @media only screen and (max-width: 768px) {
- #preorder_basic  label span {
+ #preorder_basic  label span.head_span {
     display: none;
   }
 
@@ -966,6 +1060,21 @@ span#total{
 
   #preorder_basic .tab_container {
     width: 98%;
+  }
+  p.title{
+  	font-size: 18px;
+  }
+  span.price{
+  	font-size: 16px;
+  }
+  #content1 .option_wrap, #content2 .option_wrap{
+  	font-size: 16px;
+  }
+  .money_text{
+  	font-size: 16px;
+  }
+  section#preorder_basic{
+  	padding: 60px 15px;
   }
 }
 

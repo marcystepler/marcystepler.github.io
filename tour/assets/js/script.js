@@ -1,3 +1,9 @@
+/*
+ *
+ *
+ Optimizing styles uploading
+ */
+
 $(document).ready(function() {
     $("head").append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">');
     $("head").append('<link rel="stylesheet" href="assets/css/form.css">');    
@@ -7,94 +13,144 @@ $(document).ready(function() {
 })
 
 
-// 
-// 
-// First option choosen
-// 
+/*
+ *
+ *
+ Execute when the first option (Choosee duration) choosen
+ */
 
-let first_step = document.getElementById('first_step');
-let tab2 = document.getElementById('tab2');
+
 let first_options = document.getElementsByName('option'); 
 
 var choosen_option = 0;
 var auto_price = 0;
 
-let option_price_array = [3694, 4944, 4247, 4797];
-let auto_price_array = [1232, 1644, 1415, 1599];
+var option_price_array = [3694, 4944, 4247, 4797];
+var auto_price_array = [1232, 1644, 1415, 1599];
 
+document.getElementById('first_step').addEventListener('click', function(){
+	
+	/*go to the next step*/
+	document.getElementById('tab2').checked = true;
 
-let span_price = document.getElementById('auto_price');
-
-first_step.addEventListener('click', function(){
-	// go to the next step
-	tab2.checked = true;
-	// see what option client had choose
+	/*see what option client had choose*/
 	for (opt of first_options){
 		if (opt.checked === true)
 			choosen_option = opt.value;
 	}
-	//check what price we need to show userr 
-	for (var i = 0; i < 4; i++)
+	
+	/*check what price we need to show user*/ 
+	for (let i = 0; i < 4; i++)
 	{
 		if (choosen_option == option_price_array[i])
 			auto_price = auto_price_array[i];
 	}
-	// show right price to user
-	span_price.innerHTML = auto_price;
+	
+	/*show right price to user*/
+	document.getElementById('auto_price').innerHTML = auto_price;
 });
 
-// 
-// 
-// Second option choosen
-// 
 
+/* 
+ *
+ * 
+ Execute when the second option(Book auto) choosen
+ */ 
 
-let second_step = document.getElementById('second_step');
-let second_option = document.getElementById('option_auto1');
+ document.getElementById('second_step').addEventListener('click', function(){
 
-second_step.addEventListener('click', function(){
-
+ 	/*make the second option tab clickable*/
 	document.getElementById('tab2').disabled = false;	
 	document.getElementById('tab3').checked = true;
 
+	/*get the first option (Need to change)*/ 
 	for (opt of first_options){
 		if (opt.checked === true)
 			choosen_option = opt.value;
 	}
-	//get the first option 
+	
+	/*get the auto price (Need to change)*/ 
+	auto_price = document.getElementById('auto_price').innerHTML;
 
-	auto_price = span_price.innerHTML;
-	//get the auto price
-
-	if (second_option.checked === true)
+	/*check if user choose additional autochanges and sum the money*/
+	if (document.getElementById('option_auto1').checked === true)
 		total = parseFloat(choosen_option) + parseFloat(auto_price);
 	else
 		total =  parseFloat(choosen_option);
-	// depend on user answe add or don't add the price 
+
+	/*show the correct price to user*/
 	document.getElementById('total').innerHTML = total;
-	
-	console.log(total);
+	document.getElementById('total_input').value = total;
 
 });
-				
 
-// 
-// 
-// Synchronizing chekboxes
-// 
+/* 
+ *
+ * 
+ Execute when the pay button is preseed
+ */		
 
-$("input:checkbox").on('click', function() {
-    // in the handler, 'this' refers to the box clicked on
-	var $box = $(this);
-	if ($box.is(":checked")) {
-	// the name of the box is retrieved using the .attr() method
-	// as it is assumed and expected to be immutable
-	var group = "input:checkbox[name='" + $box.attr("name") + "']";
-	// the checked state of the group/box on the other hand will change
-	// and the current value is retrieved using .prop() method
-	$(group).prop("checked", false);
-	$box.prop("checked", true);
-	} else {
-	    $box.prop("checked", false);
-	}
+// document.getElementById('third_step').addEventListener('click', ()=>{
+// 		document.getElementById('tab1').checked = true;
+// });
+
+/*
+ * 
+ *
+ Synchronizing chekboxes
+ */
+
+let checkboxes = document.querySelectorAll("input[type='checkbox']");
+
+for (var i = 0; i < checkboxes.length; i++){
+
+	checkboxes[i].addEventListener('click', ()=>{
+		
+		let box = event.target;
+	
+		if(box.checked === true){
+
+			/*choose all checkbox with the same name as clicked checkbox*/			
+			let group = document.querySelectorAll('[name="'+ box.name +'"]');
+			
+			for (let i = 0; i < group.length; i++){
+				group[i].checked = false;
+			}
+			
+			box.checked = true;
+		}
+		else{
+			box.checked = false;
+		}
+	});
+}
+
+
+
+
+
+var handler = StripeCheckout.configure({
+	key: 'pk_test_BpWd3wjjUaNY9sSoSYwfuU5f',
+	image: '/tour.com/assets/img/china.png',
+	locale: 'auto',
+	 token: function(token) {
+	    // You can access the token ID with `token.id`.
+	    // Get the token ID to your server-side code for use.
+	  }
+	});
+
+document.getElementById('third_step').addEventListener('click', function(e) {
+// Open Checkout with further options:
+	handler.open({
+	    name: 'China tour',
+	    description: "You won't regret!",
+	    zipCode: true,
+	    amount: document.getElementById('total').innerHTML * 100
+	});
+	e.preventDefault();
+});
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+	handler.close();
 });

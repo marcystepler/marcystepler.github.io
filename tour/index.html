@@ -862,48 +862,52 @@ charge back.</li>
 	<div class="tab_container">
 			<input id="tab1" type="radio" name="tabs" checked>
 			<label for="tab1">
-				<i class="fa fa-clock-o"></i><span>Choose duration</span>
+				<i class="fa fa-clock-o"></i><span class="head_span">Choose duration</span>
 			</label>
 			<!-- first step -->
 
 			<input id="tab2" type="radio" name="tabs" disabled>
 			<label for="tab2">
-				<i class="fa fa fa-automobile"></i><span>Book auto</span>
+				<i class="fa fa fa-automobile"></i><span class="head_span">Book auto</span>
 			</label>
 			<!-- second step -->
 
 			<input id="tab3" type="radio" name="tabs" disabled>
 			<label for="tab3">
-				<i class="fa fa-money"></i><span>Pay</span>
+				<i class="fa fa-money"></i><span class="head_span">Pay</span>
 			</label>
 			<!-- third step -->
 
 
 			<section id="content1" class="tab-content">
 			<!--content goes here-->
-
+				<p class="title">Choose duration of your journey woth or without single room supplement:</p>
 
 			<!-- <form  class="checkbosx_form" method='POST'> -->
 				
-				<div class="option_wrap">
+				<label class="option_wrap">
+				12 days journey for <span class="price">$3694</span>
 					<input type="checkbox" id="option1" name="option" value="3694" checked>
-					<label for="option1">12 days journey for $3694</label>
-				</div>
+					<span class="checkmark"></span>
+				</label>
 
-				<div class="option_wrap">				
+				<label class="option_wrap">	
+				12 days journey for + Single Room Supplement <span class="price">$4944</span>			
 					<input type="checkbox" id="option2" name="option" value="4944">
-					<label for="option2">12 days journey for + Single Room Supplement $4944</label>
-				</div>
+					<span class="checkmark"></span>
+				</label>
 				
-				<div class="option_wrap">				
+				<label class="option_wrap">	
+				14 days journey for <span class="price">$4247</span>			
 					<input type="checkbox" id="option3" name="option" value="4247">
-					<label for="option3">14 days journey for $4247</label>
-				</div>
+					<span class="checkmark"></span>
+				</label>
 				
-				<div class="option_wrap">
+				<label class="option_wrap">
+				14 days journey for + Single Room Supplement <span class="price">$4797</span>
 					<input type="checkbox" id="option4" name="option" value="4797">
-					<label for="option4">14 days journey for + Single Room Supplement $4797 </label>
-				</div>
+					<span class="checkmark"></span>
+				</label>
 				
 				<a class="choose show" id="first_step">CONTINUE</a>
 
@@ -912,17 +916,21 @@ charge back.</li>
 			</section>
 			
 			<section id="content2" class="tab-content">
-				<p>Do you want to add two additional auto changes for $<span id="auto_price"></span>?</p>
+				<p class="title">Do you want to add two additional auto changes for 
+						<span class="money_text">$</span><span id="auto_price" class="money_text"></span>?
+				</p>
 
-				<div class="option_wrap">				
+				<label class="option_wrap">	
+					Yes. Why not.			
 					<input type="checkbox" id="option_auto1" name="option_auto" value="Yes">
-					<label for="option_auto1">Yes. Why not.</label>
-				</div>
+					<span class="checkmark"></span>
+				</label>
 				
-				<div class="option_wrap">
+				<label class="option_wrap">
+					No, I'm not interested.
 					<input type="checkbox" id="option_auto2" name="option_auto" value="No" checked>
-					<label for="option_auto2">No, I'm not interested.</label>
-				</div>
+					<span class="checkmark"></span>
+				</label>
 
 				<a class="choose show" id="second_step">CONTINUE</a>
 
@@ -930,9 +938,11 @@ charge back.</li>
 			</section>
 			
 			<section id="content3" class="tab-content">
-				<p>You are going to pay $<span id="total"></span></p>
+				
 
-
+				<p class="title">You are going to pay
+					<span class="money_text">$</span><span id="total" class="money_text"></span>
+				</p>
 
 				<a class="choose show" id="third_step">PAY</a>
 
@@ -983,55 +993,12 @@ charge back.</li>
 	</a>
 </div>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- Stripe js includes -->
     <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
     <script src="https://checkout.stripe.com/checkout.js"></script>
-<!-- 	
-	<script>
-		
-		var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
-
-		var handler = StripeCheckout.configure({
-		    key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
-		    image: '../img/logo.png',
-		    token: function(token) {
-		      // Use the token to create the charge with a server-side script.
-		      // You can access the token ID with `token.id`
-		    }
-		});
-
-		var amount = document.getElementById('total').innerHTML;	
-		  
-		document.getElementById("stripe-button").addEventListener("click", function() {
-		  handler.open({
-		    name: 'Demo Site',
-		    description: '2 widgets',
-		    amount: 2000
-		  });
-		});
-
-	</script> -->
-
-	<!-- <script type="text/javascript" src="https://js.stripe.com/v2/"></script> -->
-
-<script>
-
-  	$('#stripe-button').click(function(){
-
-          StripeCheckout.open({
-          	source:      'https://checkout.stripe.com/checkout.js',
-            key:         'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
-            amount:      2000,
-            name:        'Serendipity Artisan Blends',
-            image:       '../../assets/img/logo.png',
-            description: 'Purchase Products',
-            panelLabel:  'Checkout'
-          });
-
-          // return false;
-    });
-
-</script>
+    <!-- Custom script includes -->
     <script src='assets/js/script.js'></script>
+    <!-- Animation -->
     <script src="assets/js/wow.min.js"></script>
     <script>
         new WOW().init();
