@@ -133,7 +133,7 @@ for (var i = 0; i < checkboxes.length; i++){
 
 var handler = StripeCheckout.configure({
 	key: 'pk_test_BpWd3wjjUaNY9sSoSYwfuU5f',
-	image: '/assets/img/china.png',
+	image: '/tour/assets/img/china.png',
 	locale: 'auto',
 	token: function(token) {
 	    // You can access the token ID with `token.id`.
