@@ -131,17 +131,15 @@ for (var i = 0; i < checkboxes.length; i++){
  Stripe settings
  */
 
-
-
 var handler = StripeCheckout.configure({
 	key: 'pk_test_BpWd3wjjUaNY9sSoSYwfuU5f',
 	image: '../img/china.png',
 	locale: 'auto',
-	 token: function(token) {
+	token: function(token) {
 	    // You can access the token ID with `token.id`.
 	    // Get the token ID to your server-side code for use.
-	  }
-	});
+	}
+});
 
 document.getElementById('third_step').addEventListener('click', function(e) {
 // Open Checkout with further options:
