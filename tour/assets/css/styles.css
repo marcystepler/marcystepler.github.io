@@ -1109,7 +1109,8 @@ input:-webkit-autofill {
 	justify-content: center;
 	align-items: center;
 }
-.payform input, .payform label{
+.payform input, 
+.payform label{
 	width:400px;
 	height: 25px;
 	margin-top: 20px;
@@ -1163,8 +1164,19 @@ input#phone{
   section#preorder_basic{
   	padding: 60px 15px;
   }
+  .payform input, 
+  .payform label{
+	width:420px;
+
+}
+}
+@media only screen and (max-width: 480px) {
+  .payform input, 
+  .payform label{
+	width:250px;
 }
 
+}
 /*Content Animation*/
 @keyframes fadeInScale {
   0% {
