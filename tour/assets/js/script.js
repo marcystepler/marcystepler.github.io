@@ -22,11 +22,9 @@ $(document).ready(function() {
 
 let first_options = document.getElementsByName('option'); 
 
-var choosen_option = 0;
-var auto_price = 0;
-
-var option_price_array = [3694, 4944, 4247, 4797];
-var auto_price_array = [1232, 1644, 1415, 1599];
+let choosen_option = 0;
+let auto_price = 0;
+let num_of_tours = 0;
 
 document.getElementById('first_step').addEventListener('click', function(){
 	
@@ -39,15 +37,16 @@ document.getElementById('first_step').addEventListener('click', function(){
 			choosen_option = opt.value;
 	}
 	
-	/*check what price we need to show user*/ 
-	for (let i = 0; i < 4; i++)
-	{
-		if (choosen_option == option_price_array[i])
-			auto_price = auto_price_array[i];
-	}
-	
+	num_of_tours = document.getElementById('num_persons').value;
+
 	/*show right price to user*/
-	document.getElementById('auto_price').innerHTML = auto_price;
+	document.getElementById('whole_price').innerHTML = choosen_option * num_of_tours;
+
+	let spans = document.getElementsByClassName('third_part');
+	for (let i = 0; i < spans.length; i++){
+		spans[i].innerHTML = Math.round( ((choosen_option * num_of_tours) / 3), -2);
+	}
+	// document.getElementById('second_step').addEventListener('click', show_payment(choosen_option * num_of_tours));
 });
 
 
@@ -63,25 +62,14 @@ document.getElementById('first_step').addEventListener('click', function(){
 	document.getElementById('tab2').disabled = false;	
 	document.getElementById('tab3').checked = true;
 
-	/*get the first option (Need to change)*/ 
-	for (opt of first_options){
-		if (opt.checked === true)
-			choosen_option = opt.value;
+
+	if (document.getElementById('price_tour').checked === true){
+		console.log("Hi");
+		document.getElementById('total').innerHTML = Math.round(choosen_option * num_of_tours + 280);
 	}
-	
-	/*get the auto price (Need to change)*/ 
-	auto_price = document.getElementById('auto_price').innerHTML;
-
-	/*check if user choose additional autochanges and sum the money*/
-	if (document.getElementById('option_auto1').checked === true)
-		total = parseFloat(choosen_option) + parseFloat(auto_price);
-	else
-		total =  parseFloat(choosen_option);
-
-	/*show the correct price to user*/
-	document.getElementById('total').innerHTML = total;
-	document.getElementById('total_input').value = total;
-
+	else if(document.getElementById('parts_payment').checked === true){
+		document.getElementById('total').innerHTML = Math.round(choosen_option * num_of_tours / 3 + 280);
+	}
 });
 
 /* 
@@ -90,9 +78,10 @@ document.getElementById('first_step').addEventListener('click', function(){
  Execute when the pay button is preseed
  */		
 
-// document.getElementById('third_step').addEventListener('click', ()=>{
-// 		document.getElementById('tab1').checked = true;
-// });
+document.getElementById('confirm_info').addEventListener('change', ()=>{
+	console.log("Submit");
+	document.getElementById('user_info').submit();
+});
 
 /*
  * 
@@ -133,7 +122,7 @@ for (var i = 0; i < checkboxes.length; i++){
 
 var handler = StripeCheckout.configure({
 	key: 'pk_test_BpWd3wjjUaNY9sSoSYwfuU5f',
-	image: '/tour/assets/img/china.png',
+	image: 'https://marcystepler.github.io/tour/assets/img/china.png',
 	locale: 'auto',
 	token: function(token) {
 	    // You can access the token ID with `token.id`.
