@@ -1224,7 +1224,7 @@ input#phone{
   span.price{
   	font-size: 16px;
   }
-  #content1 .option_wrap, #content2 .option_wrap{
+  #content1 .option_wrap, #content2 .option_wrap, #content3 .option_wrap{
   	font-size: 16px;
   }
   .money_text{
