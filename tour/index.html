@@ -983,14 +983,41 @@ charge back.</li>
 
 				<hr class="divide">
 
-				<a class="choose show" id="third_step">PAY</a>
+				
+
+<p class="title">Choose your plan:</p>
+<div class="way_to_pay_wrap">
+	<div class="way_to_pay_one choosed" id="box_part_p">
+
+				<label class="option_wrap">
+						Part payment 
+					<input type="checkbox" id="option_part_payment" name="option_pay" value="1" checked>
+					<span class="checkmark"></span>
+				</label>
+
 
 				<p class="title">Due today: <span class="money_text" id="pay_today"></span> </p>
 
 				<p class="title">Due 7/15/2018: <span class="money_text pay_next"></span> </p>
 
 				<p class="title">Due 8/15/2018: <span class="money_text pay_next"></span> </p>
-				
+	</div>
+
+	<div class="way_to_pay_two" id="box_one_p">
+
+				<label class="option_wrap">	
+				One payment:
+					<input type="checkbox" id="option_one_payment" name="option_pay" value="0">
+					<span class="checkmark"></span>
+				</label>
+
+
+				<p class="title">Due today: <span class="money_text" id="pay_whole_sum"></span> </p>
+	</div>
+</div>				
+
+
+<a class="choose show" id="third_step">PAY</a>
 			</section>
 
 	</div>

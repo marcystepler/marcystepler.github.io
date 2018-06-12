@@ -98,6 +98,7 @@ document.getElementById('fourth_step').addEventListener('click', ()=>{
 		whole_sum = array_of_prices[0];		
 
 	document.getElementById('pay_today').innerHTML =  '$' +  (whole_sum/100 * 40).toFixed(2);
+	document.getElementById('pay_whole_sum').innerHTML =  '$' +  whole_sum;
 
  	next_payments = document.getElementsByClassName('pay_next');
 	
@@ -106,6 +107,40 @@ document.getElementById('fourth_step').addEventListener('click', ()=>{
 	}
 
 });
+
+
+/*
+ * 
+ *
+ Styles adjustment
+ */
+ let first_payment = 0;
+
+ document.getElementById('option_part_payment').addEventListener('click', function(e){
+ 	console.log('s');
+ 	if (e.target.checked === true){
+ 		document.getElementById('box_part_p').classList.add('choosed');
+ 		document.getElementById('box_one_p').classList.remove('choosed');
+ 		first_payment = (whole_sum/100 * 40).toFixed(2);
+ 	}
+ 	else{
+ 		document.getElementById('box_part_p').classList.remove('choosed');
+ 	}
+ });
+
+
+ document.getElementById('option_one_payment').addEventListener('click', function(e){
+ 	console.log('s');
+ 	if (e.target.checked === true){
+ 		document.getElementById('box_part_p').classList.remove('choosed');
+ 		document.getElementById('box_one_p').classList.add('choosed');
+ 		first_payment = whole_sum.toFixed(2);
+ 	}
+ 	else{
+ 		document.getElementById('box_one_p').classList.remove('choosed');
+ 	}
+ });
+
 
 /*
  * 
@@ -166,7 +201,7 @@ document.getElementById('third_step').addEventListener('click', function(e) {
 	    name: 'China tour',
 	    description: "You won't regret!",
 	    zipCode: true,
-	    amount: whole_sum * 100
+	    amount: first_payment * 100
 	});
 	e.preventDefault();
 
@@ -176,3 +211,5 @@ document.getElementById('third_step').addEventListener('click', function(e) {
 window.addEventListener('popstate', function() {
 	handler.close();
 });
+
+
