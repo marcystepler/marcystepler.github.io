@@ -19,12 +19,14 @@ $(document).ready(function() {
  Execute when the first option (Choosee duration) choosen
  */
 
-/* array_of_prices = [	12d single room, 
-						12d room for two pp, 
-						12d room for two total,
-						14d single room,
-						14d room for two pp,
-						14d room for two total  ]*/
+/* 
+	array_of_prices = [	12d: single room, 
+							12d: room for two pp, 
+							12d: room for two total,
+							14d: single room,
+							14d: room for two pp,
+							14d: room for two total  ]
+*/
 
 let array_of_prices = [4894.06, 3605.28, 7210.56, 5626.02, 4172.29, 8344.58];
 let whole_sum = 0;
@@ -35,10 +37,11 @@ document.getElementById('first_step').addEventListener('click', ()=>{
 	/*go to the next tab*/
 	document.getElementById('tab4').checked = true;
 	
-	/*reinitializing array (in case user already pressed first step button and
+	/*reinitializing variables (in case user already pressed first step button and
 	returned to the first step)*/
 	array_of_prices = [4894.06, 3605.28, 7210.56, 5626.02, 4172.29, 8344.58];
-	
+	visa_tax = 288.91;
+
 	/*see what option client had choose*/ 
 	if (document.getElementById('option14').checked === true)
 		array_of_prices = array_of_prices.slice(3);
@@ -65,13 +68,15 @@ document.getElementById('fourth_step').addEventListener('click', ()=>{
 	document.getElementById('tab4').disabled = false;	
 
 	/*depends on user choose throw out prices we don't need*/
-	if(document.getElementById("option_friend_yes").checked === true)
+	if(document.getElementById("option_friend_yes").checked === true){
 		array_of_prices = array_of_prices.slice(2);
+		visa_tax = visa_tax * 2;
+	}
 	else
 		array_of_prices = array_of_prices.slice(0,1);
 
+	document.getElementById('visa_price').innerHTML = '$' + visa_tax;
 });
-
 
 /* 
  *
@@ -82,6 +87,7 @@ document.getElementById('fourth_step').addEventListener('click', ()=>{
  document.getElementById('second_step').addEventListener('click', ()=>{
 
 	/*go to the next tab and make current tab clickable*/
+
 	document.getElementById('tab2').disabled = false;	
 	document.getElementById('tab3').checked = true;
 
@@ -90,14 +96,9 @@ document.getElementById('fourth_step').addEventListener('click', ()=>{
 	else
 		whole_sum = array_of_prices[0];		
 
-console.log(whole_sum);
 	document.getElementById('total').innerHTML =  '$' +  whole_sum;
-
 	document.getElementById('pay_today').innerHTML =  '$' +  (whole_sum/100 * 40).toFixed(2);
-
 	document.getElementById('pay_next').innerHTML =  '$' +  (whole_sum/100 * 30).toFixed(2);
-
-
 
 });
 
