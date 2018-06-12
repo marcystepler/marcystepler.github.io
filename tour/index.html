@@ -869,20 +869,20 @@ charge back.</li>
 			<!-- first step -->
 
 			
-			<input id="tab4" type="radio" name="tabs" disabled >
-			<label for="tab4">
+			<input id="tab2" type="radio" name="tabs" disabled='true' >
+			<label for="tab2">
 				<i class="fa fa-users"></i><span class="head_span">Bring a friend</span>
 			</label>
-
-
-			<input id="tab2" type="radio" name="tabs" disabled>
-			<label for="tab2">
+			<!-- fourth step -->
+		
+			<input id="tab3" type="radio" name="tabs" disabled='true'>
+			<label for="tab3">
 				<i class="fa fa-plane"></i><span class="head_span">Visa tax</span>
 			</label>
 			<!-- second step -->
 
-			<input id="tab3" type="radio" name="tabs" disabled>
-			<label for="tab3">
+			<input id="tab4" type="radio" name="tabs" disabled='true'>
+			<label for="tab4">
 				<i class="fa fa-money"></i><span class="head_span">Pay</span>
 			</label>
 			<!-- third step -->
@@ -912,7 +912,7 @@ charge back.</li>
 
 			</section>
 
-			<section id="content4" class="tab-content">
+			<section id="content2" class="tab-content">
 			<!--content goes here-->
 
 				<p class="title">Bring your friend and get <span class="money_text" id="discount">$</span> discount!</p>
@@ -934,7 +934,7 @@ charge back.</li>
 			<!-- </form> -->
 			</section>
 			
-			<section id="content2" class="tab-content">
+			<section id="content3" class="tab-content">
 				<p class="title">Do you want us to handle visa for you?</p>
 
 				
@@ -957,11 +957,11 @@ charge back.</li>
 			<!--content goes here-->
 			</section>
 			
-			<section id="content3" class="tab-content">
+			<section id="content4" class="tab-content">
 				
-				<p class="title">Please, put some info here:</p>
+				<p class="title">Enter your personal, traveler information:</p>
 
-				<form class="payform" id="user_info"	action="" method="POST">
+				<form class="payform" id="user_info" action="file.php" method="POST">
 
 					<label for="first_name">First name</label>
 					<input id="first_name"type="text" name="fist_name">
@@ -972,10 +972,9 @@ charge back.</li>
 					<label for="phone">Phone</label>
 					<input id="phone"type="tel" name="phone">
 					
-					<p class="tittle margin_clear">Please, chek your info and confirm it before the payment:</p>
-					<label class="option_wrap">	
-						Info is right. Send it.	
-						<input type="checkbox" id="confirm_info" name="confirmation">
+					<label class="option_wrap terms">	
+						I agree to the <a href="https://sino-american.marketing/trips/china/terms.pdf">terms and conditions</a> for this trip.
+						<input type="checkbox" name="confirmation" checked>
 						<span class="checkmark"></span>
 					
 					</label>
@@ -984,16 +983,14 @@ charge back.</li>
 
 				<hr class="divide">
 
-				<p class="title">You are going to pay
-					<span class="money_text" id="pay_today">$</span> now and <span class="money_text" id="pay_next">$</span> on 15 July and 15 August
-					Total: <span id="total" class="money_text">$</span>
-				</p>
-
-
-				
-
 				<a class="choose show" id="third_step">PAY</a>
 
+				<p class="title">Due today: <span class="money_text" id="pay_today"></span> </p>
+
+				<p class="title">Due 7/15/2018: <span class="money_text pay_next"></span> </p>
+
+				<p class="title">Due 8/15/2018: <span class="money_text pay_next"></span> </p>
+				
 			</section>
 
 	</div>

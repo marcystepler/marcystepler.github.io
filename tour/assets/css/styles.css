@@ -116,7 +116,7 @@ section h3.title{
 }
 
 section p{
-	max-width: 800px;
+	max-width: 900px;
 	text-align: center;
 	margin-bottom: 35px;
 	padding: 0 20px;
@@ -1060,6 +1060,24 @@ p.title{
 	width:100%;
 	margin-bottom: 10px;
 }
+
+#content4 p.title:not(:first-child){
+	margin:0;
+	padding: 0;
+}	
+
+#content4 a.choose{
+	margin-bottom: 20px;
+}
+#content4 label.terms{
+	width: auto;
+	font-weight: 400;
+}
+
+label.terms a{
+	font-style: italic;
+	font-weight: 600;
+}
 /*tabs content ends here*/
 
 /*CUSTOM INPUT TYPE NUMBER BOX*/
@@ -1332,5 +1350,9 @@ h5{
 @media (max-width: 480px) {
 	.photo{
 		width: 100%;
+	}
+	#content3 label.terms{
+		font-size: 18px;
+		margin-bottom: 20px;		
 	}
 }
