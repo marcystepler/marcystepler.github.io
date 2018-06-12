@@ -868,9 +868,16 @@ charge back.</li>
 			</label>
 			<!-- first step -->
 
+			
+			<input id="tab4" type="radio" name="tabs" disabled >
+			<label for="tab4">
+				<i class="fa fa-users"></i><span class="head_span">Bring a friend</span>
+			</label>
+
+
 			<input id="tab2" type="radio" name="tabs" disabled>
 			<label for="tab2">
-				<i class="fa fa-pie-chart"></i><span class="head_span">Choose pay plan</span>
+				<i class="fa fa-plane"></i><span class="head_span">Visa tax</span>
 			</label>
 			<!-- second step -->
 
@@ -883,64 +890,67 @@ charge back.</li>
 
 			<section id="content1" class="tab-content">
 			<!--content goes here-->
-				<p class="title">Choose duration of your journey woth or without single room supplement:</p>
+				<p class="title">Choose duration of your journey:</p>
 
 			<!-- <form  class="checkbosx_form" method='POST'> -->
 				
 				<label class="option_wrap">
-				12 days journey for <span class="price">$3497</span>
-					<input type="checkbox" id="option1" name="option" value="3497" checked>
+				Basic (12 days journey).
+					<input type="checkbox" id="option12" name="option" value="12" checked>
 					<span class="checkmark"></span>
 				</label>
 
 				<label class="option_wrap">	
-				12 days journey for + Single Room Supplement <span class="price">$4747</span>			
-					<input type="checkbox" id="option2" name="option" value="4747">
+					Full (12 days journey + Yiwu addon(2 days) = 14 days of excitement!)					
+					<input type="checkbox" id="option14" name="option" value="14">
 					<span class="checkmark"></span>
 				</label>
-				
-				<label class="option_wrap">	
-				14 days journey for <span class="price">$4047</span>			
-					<input type="checkbox" id="option3" name="option" value="4047">
-					<span class="checkmark"></span>
-				</label>
-				
-				<label class="option_wrap">
-				14 days journey for + Single Room Supplement <span class="price">$4207</span>
-					<input type="checkbox" id="option4" name="option" value="4027">
-					<span class="checkmark"></span>
-				</label>
-
-				<hr class="divide">
-
-				<p class="title">Choose a number of tour you want to buy:</p>
-
-				<input type="number" id="num_persons" name="quantity" min="1" max="15" value="1" class="mod">
 
 				<a class="choose show" id="first_step">CONTINUE</a>
 
 			<!-- </form> -->
 
 			</section>
+
+			<section id="content4" class="tab-content">
+			<!--content goes here-->
+
+				<p class="title">Bring your friend and get <span class="money_text" id="discount">$</span> discount!</p>
+
+				<label class="option_wrap">
+				I will travel by myself for <span class="money_text" id="single_price">$</span>.
+					<input type="checkbox" id="option_friend_no" name="option_friend" value="1" checked>
+					<span class="checkmark"></span>
+				</label>
+
+				<label class="option_wrap">	
+				I will travel with my friend for <span class="money_text" id="friendly_price">$</span> each! (<span class="money_text" id="double_price">$</span> in total		)
+					<input type="checkbox" id="option_friend_yes" name="option_friend" value="2">
+					<span class="checkmark"></span>
+				</label>
+
+				<a class="choose show" id="fourth_step">CONTINUE</a>
+
+			<!-- </form> -->
+			</section>
 			
 			<section id="content2" class="tab-content">
 				<p class="title">What type of payment do you like more:</p>
 
-				<label class="option_wrap">	
-					
-					Whole price (<span class="money_text">$</span>
-								<span id="whole_price" class="money_text"></span>)today  + <span class="money_text">$280</span> visa fee. 	
-					
-					<input type="checkbox" id="price_tour" name="option_pay" value="Yes">
-					
-					<span class="checkmark"></span>
-				</label>
+				Do you want us to handle Visa for you? 
 				
-				<label class="option_wrap"><span class="money_text">$</span>
-					<span class="money_text third_part"></span> of price + <span class="money_text">$280</span> today and two more payments for <span class="money_text">$</span><span class="money_text third_part"></span> on 15th June and 15th July.
-					<input type="checkbox" id="parts_payment" name="option_pay" value="No" checked>
+				<label class="option_wrap">
+				Yes, I do. (It will cost <span class="money_text">$288.91</span> Visa tax )
+					<input type="checkbox" id="option_visa_yes" name="option_visa" value="1" checked>
 					<span class="checkmark"></span>
 				</label>
+
+				<label class="option_wrap">	
+				No, I don't need it.
+					<input type="checkbox" id="option_visa_no" name="option_visa" value="0">
+					<span class="checkmark"></span>
+				</label>
+
 
 				<a class="choose show" id="second_step">CONTINUE</a>
 
@@ -975,8 +985,12 @@ charge back.</li>
 				<hr class="divide">
 
 				<p class="title">You are going to pay
-					<span class="money_text">$</span><span id="total" class="money_text"></span>
+					<span class="money_text" id="pay_today">$</span> and 	<span class="money_text" id="pay_next">$</span> on 15 July and 15 August
+					Total: <span id="total" class="money_text">$</span>
 				</p>
+
+
+				
 
 				<a class="choose show" id="third_step">PAY</a>
 

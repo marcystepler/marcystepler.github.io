@@ -19,57 +19,86 @@ $(document).ready(function() {
  Execute when the first option (Choosee duration) choosen
  */
 
+/* array_of_prices = [	12d single room, 
+						12d room for two pp, 
+						12d room for two total,
+						14d single room,
+						14d room for two pp,
+						14d room for two total  ]*/
 
-let first_options = document.getElementsByName('option'); 
+let array_of_prices = [4894.06, 3605.28, 7210.56, 5626.02, 4172.29, 8344.58];
+let whole_sum = 0;
+let visa_tax = 288.91;
 
-let choosen_option = 0;
-let auto_price = 0;
-let num_of_tours = 0;
-
-document.getElementById('first_step').addEventListener('click', function(){
+document.getElementById('first_step').addEventListener('click', ()=>{
 	
-	/*go to the next step*/
+	/*go to the next tab*/
+	document.getElementById('tab4').checked = true;
+	
+	/*reinitializing array (in case user already pressed first step button and
+	returned to the first step)*/
+	array_of_prices = [4894.06, 3605.28, 7210.56, 5626.02, 4172.29, 8344.58];
+	
+	/*see what option client had choose*/ 
+	if (document.getElementById('option14').checked === true)
+		array_of_prices = array_of_prices.slice(3);
+	else
+		array_of_prices=array_of_prices.slice(0, 3);		
+
+	/*display the right info on the next tab*/
+	document.getElementById('friendly_price').innerHTML = '$' + array_of_prices[1];
+	document.getElementById('discount').innerHTML = '$' +  parseInt(array_of_prices[0] - array_of_prices[1]);
+	document.getElementById('single_price').innerHTML =  '$' +  array_of_prices[0];
+	document.getElementById('double_price').innerHTML =  '$' + array_of_prices[2];
+});
+
+/* 
+ *
+ * 
+ Execute when the second option (Bring friend) choosen
+ */ 
+
+document.getElementById('fourth_step').addEventListener('click', ()=>{
+	
+	/*go to the next tab and make current tab clickable*/
 	document.getElementById('tab2').checked = true;
+	document.getElementById('tab4').disabled = false;	
 
-	/*see what option client had choose*/
-	for (opt of first_options){
-		if (opt.checked === true)
-			choosen_option = opt.value;
-	}
-	
-	num_of_tours = document.getElementById('num_persons').value;
+	/*depends on user choose throw out prices we don't need*/
+	if(document.getElementById("option_friend_yes").checked === true)
+		array_of_prices = array_of_prices.slice(2);
+	else
+		array_of_prices = array_of_prices.slice(0,1);
 
-	/*show right price to user*/
-	document.getElementById('whole_price').innerHTML = choosen_option * num_of_tours;
-
-	let spans = document.getElementsByClassName('third_part');
-	for (let i = 0; i < spans.length; i++){
-		spans[i].innerHTML = Math.round( ((choosen_option * num_of_tours) / 3), -2);
-	}
-	// document.getElementById('second_step').addEventListener('click', show_payment(choosen_option * num_of_tours));
 });
 
 
 /* 
  *
  * 
- Execute when the second option(Book auto) choosen
+ Execute when third option (VISA tax) choosen
  */ 
 
- document.getElementById('second_step').addEventListener('click', function(){
+ document.getElementById('second_step').addEventListener('click', ()=>{
 
- 	/*make the second option tab clickable*/
+	/*go to the next tab and make current tab clickable*/
 	document.getElementById('tab2').disabled = false;	
 	document.getElementById('tab3').checked = true;
 
+	if (document.getElementById("option_visa_yes").checked === true)
+		whole_sum = array_of_prices[0] + visa_tax;		
+	else
+		whole_sum = array_of_prices[0];		
 
-	if (document.getElementById('price_tour').checked === true){
-		console.log("Hi");
-		document.getElementById('total').innerHTML = Math.round(choosen_option * num_of_tours + 280);
-	}
-	else if(document.getElementById('parts_payment').checked === true){
-		document.getElementById('total').innerHTML = Math.round(choosen_option * num_of_tours / 3 + 280);
-	}
+console.log(whole_sum);
+	document.getElementById('total').innerHTML =  '$' +  whole_sum;
+
+	document.getElementById('pay_today').innerHTML =  '$' +  (whole_sum/100 * 40).toFixed(2);
+
+	document.getElementById('pay_next').innerHTML =  '$' +  (whole_sum/100 * 30).toFixed(2);
+
+
+
 });
 
 /* 
@@ -93,19 +122,16 @@ let checkboxes = document.querySelectorAll("input[type='checkbox']");
 
 for (var i = 0; i < checkboxes.length; i++){
 
-	checkboxes[i].addEventListener('click', ()=>{
-		
+	checkboxes[i].addEventListener('click', ()=>{		
 		let box = event.target;
 	
 		if(box.checked === true){
-
 			/*choose all checkbox with the same name as clicked checkbox*/			
 			let group = document.querySelectorAll('[name="'+ box.name +'"]');
 			
 			for (let i = 0; i < group.length; i++){
 				group[i].checked = false;
 			}
-			
 			box.checked = true;
 		}
 		else{
@@ -136,7 +162,7 @@ document.getElementById('third_step').addEventListener('click', function(e) {
 	    name: 'China tour',
 	    description: "You won't regret!",
 	    zipCode: true,
-	    amount: document.getElementById('total').innerHTML * 100
+	    amount: whole_sum * 100
 	});
 	e.preventDefault();
 });

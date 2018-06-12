@@ -877,7 +877,7 @@ ul.price_list li{
 
 .tab_container {
 	width: 100%;
-	max-width: 800px;
+	max-width: 950px;
 	margin:60px auto;
 }
 
@@ -886,7 +886,8 @@ section.tab-content{
 }
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
-#tab3:checked ~ #content3{
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -911,7 +912,7 @@ section.tab-content{
   font-size: 18px;
   display: block;
   float: left;
-  width: 33.3%;
+  width: 25%;
   padding: 1.5em;
   color: #757575;
   cursor: pointer;
@@ -946,7 +947,8 @@ section.tab-content{
 
 #content1 a.choose,
 #content2 a.choose,
-#content3 a.choose{
+#content3 a.choose,
+#content4 a.choose{
 	margin-top: 20px;
 	align-self: center;
 }
@@ -968,7 +970,8 @@ section.tab-content{
 
 #content1 .option_wrap,
 #content2 .option_wrap,
-#content3 .option_wrap{
+#content3 .option_wrap,
+#content4 .option_wrap{
   display: block;
   position: relative;
   padding-left: 35px;
@@ -983,7 +986,8 @@ section.tab-content{
 
 #content2 .option_wrap input,
 #content1 .option_wrap input,
-#content3 .option_wrap input{
+#content3 .option_wrap input,
+#content4 .option_wrap input{
 	position: absolute;
   	opacity: 0;
   	cursor: pointer;
@@ -1000,14 +1004,16 @@ section.tab-content{
 /* On mouse-over, add a grey background color */
 #content1 .option_wrap:hover input ~ .checkmark,
 #content2 .option_wrap:hover input ~ .checkmark,
-#content3 .option_wrap:hover input ~ .checkmark {
+#content3 .option_wrap:hover input ~ .checkmark,
+#content4 .option_wrap:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
 #content1 .option_wrap input:checked ~ .checkmark,
 #content2 .option_wrap input:checked ~ .checkmark,
-#content3 .option_wrap input:checked ~ .checkmark {
+#content3 .option_wrap input:checked ~ .checkmark,
+#content4 .option_wrap input:checked ~ .checkmark {
   background-color: #4E8098;
 }
 
@@ -1021,14 +1027,16 @@ section.tab-content{
 /* Show the checkmark when checked */
 #content1 .option_wrap input:checked ~ .checkmark:after,
 #content2 .option_wrap input:checked ~ .checkmark:after,
-#content3 .option_wrap input:checked ~ .checkmark:after {
+#content3 .option_wrap input:checked ~ .checkmark:after,
+#content4 .option_wrap input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
 #content1 .option_wrap .checkmark:after,
 #content2 .option_wrap .checkmark:after,
-#content3 .option_wrap .checkmark:after
+#content3 .option_wrap .checkmark:after,
+#content4 .option_wrap .checkmark:after
  {
   left: 9px;
   top: 5px;
@@ -1040,6 +1048,7 @@ section.tab-content{
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+#content4 span.price,
 #content3 span.price,
 #content2 span.price,
 #content1 span.price{
