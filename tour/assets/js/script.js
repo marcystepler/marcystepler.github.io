@@ -31,6 +31,9 @@ let array_of_prices = [4894.06, 3605.28, 7210.56, 5626.02, 4172.29, 8344.58];
 
 let whole_sum = 0;
 let visa_tax = 288.91;
+let first_payment = 0;
+
+
 
 document.getElementById('first_step').addEventListener('click', ()=>{
 	
@@ -106,46 +109,43 @@ document.getElementById('fourth_step').addEventListener('click', ()=>{
 		next_payments[i].innerHTML = '$' +  (whole_sum/100 * 30).toFixed(2);
 	}
 
+	first_payment = (whole_sum/100 * 40).toFixed(2)
 });
 
 
 /*
  * 
  *
- Styles adjustment
+ Synchronizing payment plan chekboxes
  */
- let first_payment = 0;
 
- document.getElementById('option_part_payment').addEventListener('click', function(e){
- 	console.log('s');
- 	if (e.target.checked === true){
- 		document.getElementById('box_part_p').classList.add('choosed');
- 		document.getElementById('box_one_p').classList.remove('choosed');
- 		first_payment = (whole_sum/100 * 40).toFixed(2);
- 	}
- 	else{
- 		document.getElementById('box_part_p').classList.remove('choosed');
- 	}
- });
+let pay_ways = document.getElementsByClassName("pay_way");
 
+for (let i = 0; i < pay_ways.length; i++){
+	
+	pay_ways[i].addEventListener('click', function(e){
 
- document.getElementById('option_one_payment').addEventListener('click', function(e){
- 	console.log('s');
- 	if (e.target.checked === true){
- 		document.getElementById('box_part_p').classList.remove('choosed');
- 		document.getElementById('box_one_p').classList.add('choosed');
- 		first_payment = whole_sum.toFixed(2);
- 	}
- 	else{
- 		document.getElementById('box_one_p').classList.remove('choosed');
- 	}
- });
+		let way = e.target;
+		
+		if (way.checked === true){
 
+			for (let i = 0; i < pay_ways.length; i++){
+				pay_ways[i].parentNode.parentNode.classList.remove('choosed');
+			}
+			way.parentNode.parentNode.classList.add('choosed');
+		}
+		else{
+			way.classList.remove('choosed');
+		}
+		
+		first_payment = (whole_sum/100 * parseInt(way.value)).toFixed(2);
+	});
+}
 
 /*
  * 
  *
- Synchronizing chekboxes
+ Synchronizing all chekboxes
  */
 
 let checkboxes = document.querySelectorAll("input[type='checkbox']");
