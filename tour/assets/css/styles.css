@@ -1105,8 +1105,27 @@ label.terms a{
 
 
 
+/*
+ *
+ *
+ Backgrounds 
+ */
 
 
+.reasons{
+	background-image: url(../img/dragon.png), url(../img/dragon2.png), url(../img/dragon3.png);
+	background-position: right top, left center, right bottom;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.pattern_one{
+	background: url(../img/dragonpattern.png) top center repeat-x;
+	height: 235px;
+}
+.pattern_two{
+	background: url(../img/dragonpattern2.png) top center repeat-x;
+	height: 235px;
+}
 /*tabs content ends here*/
 
 /*CUSTOM INPUT TYPE NUMBER BOX*/
@@ -1407,4 +1426,12 @@ h5{
 		font-size: 18px;
 		margin-bottom: 20px;		
 	}
+	.pattern_one{
+	background: url(../img/dragonpattern1_s.png) top center repeat-x;
+	height: 235px;
+}
+.pattern_two{
+	background: url(../img/dragonpattern2_s.png) top center repeat-x;
+	height: 235px;
+}
 }
