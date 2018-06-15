@@ -890,10 +890,9 @@ charge back.</li>
 
 
 			<section id="content1" class="tab-content">
+
 			<!--content goes here-->
 				<p class="title">Choose duration of your journey:</p>
-
-			<!-- <form  class="checkbosx_form" method='POST'> -->
 				
 				<label class="option_wrap">
 				Basic (12 days journey).
@@ -909,9 +908,8 @@ charge back.</li>
 
 				<a class="choose show" id="first_step">CONTINUE</a>
 
-			<!-- </form> -->
-
 			</section>
+			<!-- THE END of DURATION STEP -->
 
 			<section id="content2" class="tab-content">
 			<!--content goes here-->
@@ -930,16 +928,13 @@ charge back.</li>
 					<span class="checkmark"></span>
 				</label>
 
-				<a class="choose show" id="fourth_step">CONTINUE</a>
-
-			<!-- </form> -->
+				<a class="choose show" id="second_step">CONTINUE</a>
 			</section>
+			<!-- THE END of FRIEND STEP -->
 			
 			<section id="content3" class="tab-content">
 				<p class="title">Do you want us to handle visa for you?</p>
 
-				
-				
 				<label class="option_wrap">
 				Yes, I do. (It will cost <span class="money_text" id="visa_price"></span> Visa tax)
 					<input type="checkbox" id="option_visa_yes" name="option_visa" value="1" checked>
@@ -951,12 +946,11 @@ charge back.</li>
 					<input type="checkbox" id="option_visa_no" name="option_visa" value="0">
 					<span class="checkmark"></span>
 				</label>
-
-
-				<a class="choose show" id="second_step">CONTINUE</a>
+				<a class="choose show" id="third_step">CONTINUE</a>
 
 			<!--content goes here-->
 			</section>
+			<!-- THE END of VISA STEP -->
 			
 			<section id="content4" class="tab-content">
 				
@@ -981,45 +975,46 @@ charge back.</li>
 					</label>
 
 				</form>
+				<!-- form for gather payer info -->
 
 				<hr class="divide">
 
 				
 
-<p class="title">Choose your plan:</p>
-<div class="way_to_pay_wrap">
-	<div class="way_to_pay_one choosed" id="box_part_p">
+				<p class="title">Choose your plan:</p>
+				<div class="way_to_pay_wrap">
+					<div class="way_to_pay_one choosed" id="box_part_p">
 
-				<label class="option_wrap">
-						Part payment 
-					<input type="checkbox" id="option_part_payment" name="option_pay" value="40" class="pay_way" checked="true">
-					<span class="checkmark"></span>
-				</label>
-
-
-				<p class="title">Due today: <span class="money_text" id="pay_today"></span> </p>
-
-				<p class="title">Due 7/15/2018: <span class="money_text pay_next"></span> </p>
-
-				<p class="title">Due 8/15/2018: <span class="money_text pay_next"></span> </p>
-	</div>
-
-	<div class="way_to_pay_two" id="box_one_p">
-
-				<label class="option_wrap">	
-				One payment:
-					<input type="checkbox" id="option_one_payment" name="option_pay" value="100" class="pay_way">
-					<span class="checkmark"></span>
-				</label>
+						<label class="option_wrap">
+							Part payment 
+							<input type="checkbox" id="option_part_payment" name="option_pay" value="40" class="pay_way" checked="true">
+							<span class="checkmark"></span>
+						</label>
 
 
-				<p class="title">Due today: <span class="money_text" id="pay_whole_sum"></span> </p>
-	</div>
-</div>				
+						<p class="title">Due today: <span class="money_text" id="pay_today"></span> </p>
+						<p class="title">Due 7/15/2018: <span class="money_text pay_next"></span> </p>
+						<p class="title">Due 8/15/2018: <span class="money_text pay_next"></span> </p>
+					</div>
+					<!-- way to pay one end -->
 
+					<div class="way_to_pay_two" id="box_one_p">
+						<label class="option_wrap">	
+						One payment:
+							<input type="checkbox" id="option_one_payment" name="option_pay" value="100" class="pay_way">
+							<span class="checkmark"></span>
+						</label>
+						
+						<p class="title">Due today: <span class="money_text" id="pay_whole_sum"></span> </p>
+					</div>
+					<!-- way to pay two end -->
+				</div>
+				<!-- way to pay wrpa end -->
 
-<a class="choose show" id="third_step">PAY</a>
+				<a class="choose show" id="fourth_step">PAY</a>
+				<!-- DTRIPE BUTTON -->
 			</section>
+			<!-- THE END OF FINAL STEP -->
 
 	</div>
 

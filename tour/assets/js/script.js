@@ -63,7 +63,7 @@ document.getElementById('first_step').addEventListener('click', ()=>{
  Execute when the second option (Bring friend) choosen
  */ 
 
-document.getElementById('fourth_step').addEventListener('click', ()=>{
+document.getElementById('second_step').addEventListener('click', ()=>{
 	
 	//go to the next tab and make current tab clickable
 	document.getElementById('tab3').checked = true;
@@ -88,7 +88,7 @@ document.getElementById('fourth_step').addEventListener('click', ()=>{
  Execute when third option (VISA tax) choosen
  */ 
 
- document.getElementById('second_step').addEventListener('click', ()=>{
+ document.getElementById('third_step').addEventListener('click', ()=>{
 
 	//go to the next tab and make current tab clickable
 
@@ -187,7 +187,7 @@ var handler = StripeCheckout.configure({
 	}
 });
 
-document.getElementById('third_step').addEventListener('click', function(e) {
+document.getElementById('fourth_step').addEventListener('click', function(e) {
 
 /*  
 	Form that should be submited
