@@ -353,26 +353,38 @@ header nav li:last-child{
 /*---------------------
  	10 reasons Section
 -----------------------*/
+.reasons h3.title{
+	padding: 20px;
+	background-color: #fff;
+}
 .reasons{
 	background-color: #fff;
 }
 .reasons ul{
-	max-width: 800px;
+	max-width: 1000px;
 	width: 100%;
 	list-style: none;
 }
 .reasons ul li{
-	padding-left: 25px;
+	max-width: 80%;
+	padding:40px 40px 40px 65px;
 	position: relative;
 	line-height: 32px;
 	margin-top: 20px;
 	font-size: 18px;
 	font-weight: 500;
-}
 
+	background-color: #fff;
+	margin:30px 0;
+	box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+	transition: all 0.5s ease-in-out;
+}
+.reasons ul li:nth-child(2n){
+	margin-left:20%;
+}
 .reasons ul li span.numb{
 	position: absolute;
-	left: 0;
+	left: 30px;
 	font-size:28px;
 	color:#A01A33;
 	padding-right: 30px;
@@ -380,9 +392,30 @@ header nav li:last-child{
 }
 
 .reasons ul li span.widest{
-	left: -15px;
+	left: 20px;
+}
+.reasons ul li:hover{
+	transform: scale(1.1, 1.1);
+}
+.reasons ul li img{
+	max-width: 100%;
+	margin-bottom: 15px;
 }
 
+@media (max-width: 767px){
+	.reasons ul li:nth-child(2n){
+		margin-left: 0;
+	}
+	.reasons ul li{
+		max-width:100%;
+		padding: 60px 20px 20px 20px;
+	}
+	.reasons ul li span.numb{
+		left: 45%;
+		top:15px;
+		font-size:28px;
+	}
+}
 
 /*----------------
  	Days Section
@@ -1112,8 +1145,14 @@ label.terms a{
  */
 
 
-.reasons{
+/*.reasons{
 	background-image: url(../img/dragon.png), url(../img/dragon2.png), url(../img/dragon3.png);
+	background-position: right top, left center, right bottom;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+}*/
+
+.reasons{
+	background-image: url(../img/dragon_part_1.png), url(../img/dragon_part2.png), url(../img/dragon_part_3.png);
 	background-position: right top, left center, right bottom;
 	background-repeat: no-repeat, no-repeat, no-repeat;
 }
