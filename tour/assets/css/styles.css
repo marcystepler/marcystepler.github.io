@@ -116,7 +116,7 @@ section h3.title{
 }
 
 section p{
-	max-width: 800px;
+	max-width: 900px;
 	text-align: center;
 	margin-bottom: 35px;
 	padding: 0 20px;
@@ -353,36 +353,68 @@ header nav li:last-child{
 /*---------------------
  	10 reasons Section
 -----------------------*/
+.reasons h3.title{
+	padding: 20px;
+	background-color: #fff;
+}
 .reasons{
 	background-color: #fff;
 }
 .reasons ul{
-	max-width: 800px;
+	max-width: 1000px;
 	width: 100%;
 	list-style: none;
 }
 .reasons ul li{
-	padding-left: 25px;
+	max-width: 80%;
+	padding:40px 40px 40px 65px;
 	position: relative;
 	line-height: 32px;
 	margin-top: 20px;
 	font-size: 18px;
 	font-weight: 500;
-}
 
+	background-color: #fff;
+	margin:30px 0;
+	box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+	transition: all 0.5s ease-in-out;
+}
+.reasons ul li:nth-child(2n){
+	margin-left:20%;
+}
 .reasons ul li span.numb{
 	position: absolute;
-	left: 0;
+	left: 30px;
 	font-size:28px;
 	color:#A01A33;
 	padding-right: 30px;
 
 }
-
 .reasons ul li span.widest{
-	left: -15px;
+	left: 20px;
+}
+.reasons ul li:hover{
+	transform: scale(1.1, 1.1);
+}
+.reasons ul li img{
+	max-width: 100%;
+	margin-bottom: 15px;
 }
 
+@media (max-width: 767px){
+	.reasons ul li:nth-child(2n){
+		margin-left: 0;
+	}
+	.reasons ul li{
+		max-width:100%;
+		padding: 60px 20px 20px 20px;
+	}
+	.reasons ul li span.numb{
+		left: 45%;
+		top:15px;
+		font-size:28px;
+	}
+}
 
 /*----------------
  	Days Section
@@ -877,7 +909,7 @@ ul.price_list li{
 
 .tab_container {
 	width: 100%;
-	max-width: 800px;
+	max-width: 950px;
 	margin:60px auto;
 }
 
@@ -886,7 +918,8 @@ section.tab-content{
 }
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
-#tab3:checked ~ #content3{
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -911,7 +944,7 @@ section.tab-content{
   font-size: 18px;
   display: block;
   float: left;
-  width: 33.3%;
+  width: 25%;
   padding: 1.5em;
   color: #757575;
   cursor: pointer;
@@ -946,7 +979,8 @@ section.tab-content{
 
 #content1 a.choose,
 #content2 a.choose,
-#content3 a.choose{
+#content3 a.choose,
+#content4 a.choose{
 	margin-top: 20px;
 	align-self: center;
 }
@@ -968,7 +1002,8 @@ section.tab-content{
 
 #content1 .option_wrap,
 #content2 .option_wrap,
-#content3 .option_wrap{
+#content3 .option_wrap,
+#content4 .option_wrap{
   display: block;
   position: relative;
   padding-left: 35px;
@@ -983,7 +1018,8 @@ section.tab-content{
 
 #content2 .option_wrap input,
 #content1 .option_wrap input,
-#content3 .option_wrap input{
+#content3 .option_wrap input,
+#content4 .option_wrap input{
 	position: absolute;
   	opacity: 0;
   	cursor: pointer;
@@ -1000,14 +1036,16 @@ section.tab-content{
 /* On mouse-over, add a grey background color */
 #content1 .option_wrap:hover input ~ .checkmark,
 #content2 .option_wrap:hover input ~ .checkmark,
-#content3 .option_wrap:hover input ~ .checkmark {
+#content3 .option_wrap:hover input ~ .checkmark,
+#content4 .option_wrap:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
 #content1 .option_wrap input:checked ~ .checkmark,
 #content2 .option_wrap input:checked ~ .checkmark,
-#content3 .option_wrap input:checked ~ .checkmark {
+#content3 .option_wrap input:checked ~ .checkmark,
+#content4 .option_wrap input:checked ~ .checkmark {
   background-color: #4E8098;
 }
 
@@ -1021,14 +1059,16 @@ section.tab-content{
 /* Show the checkmark when checked */
 #content1 .option_wrap input:checked ~ .checkmark:after,
 #content2 .option_wrap input:checked ~ .checkmark:after,
-#content3 .option_wrap input:checked ~ .checkmark:after {
+#content3 .option_wrap input:checked ~ .checkmark:after,
+#content4 .option_wrap input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
 #content1 .option_wrap .checkmark:after,
 #content2 .option_wrap .checkmark:after,
-#content3 .option_wrap .checkmark:after
+#content3 .option_wrap .checkmark:after,
+#content4 .option_wrap .checkmark:after
  {
   left: 9px;
   top: 5px;
@@ -1040,6 +1080,7 @@ section.tab-content{
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+#content4 span.price,
 #content3 span.price,
 #content2 span.price,
 #content1 span.price{
@@ -1050,6 +1091,78 @@ p.title{
 	text-align: center;
 	width:100%;
 	margin-bottom: 10px;
+}
+
+#content4 p.title:not(:first-child){
+	margin:0;
+	padding: 0;
+}	
+
+#content4 a.choose{
+	margin-bottom: 20px;
+}
+#content4 label.terms{
+	width: auto;
+	font-weight: 400;
+}
+
+label.terms a{
+	font-style: italic;
+	font-weight: 600;
+}
+
+
+
+.way_to_pay_wrap{
+	width:100%;
+	display: flex;
+	justify-content: space-around;
+}
+.way_to_pay_wrap>div{
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow:0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+	padding: 15px;
+	margin: 40px 0;
+	transition: all ease-in-out .5s;
+}
+.way_to_pay_wrap>div.choosed{
+    -ms-transform: scale(1.1, 1.1); /* IE 9 */
+    -webkit-transform: scale(1.1, 1.1); /* Safari */
+    transform: scale(1.1, 1.1);
+}
+
+
+
+/*
+ *
+ *
+ Backgrounds 
+ */
+
+
+/*.reasons{
+	background-image: url(../img/dragon.png), url(../img/dragon2.png), url(../img/dragon3.png);
+	background-position: right top, left center, right bottom;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+}*/
+
+.reasons{
+	background-image: url(../img/dragon_part_1.png), url(../img/dragon_part2.png), url(../img/dragon_part_3.png);
+	background-position: right top, left center, right bottom;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.pattern_one{
+	background: url(../img/dragonpattern.png) top center repeat-x;
+	height: 235px;
+}
+.pattern_two{
+	background: url(../img/dragonpattern2.png) top center repeat-x;
+	height: 235px;
 }
 /*tabs content ends here*/
 
@@ -1128,6 +1241,19 @@ input#phone{
 	margin-bottom: 30px;
 }
 /*Media query*/
+
+@media only screen and (max-width: 1190px) {
+
+	.way_to_pay_wrap>div p.title,
+	.way_to_pay_wrap>div .money_text{
+		font-size: 18px;
+	}
+
+	#preorder_basic label[for^='tab'] {
+		font-size: 14px;
+	}
+}
+
 @media only screen and (max-width: 930px) {
  #preorder_basic  label span {
     font-size: 14px;
@@ -1155,7 +1281,7 @@ input#phone{
   span.price{
   	font-size: 16px;
   }
-  #content1 .option_wrap, #content2 .option_wrap{
+  #content1 .option_wrap, #content2 .option_wrap, #content3 .option_wrap{
   	font-size: 16px;
   }
   .money_text{
@@ -1175,6 +1301,16 @@ input#phone{
   .payform label{
 	width:250px;
 }
+
+.way_to_pay_wrap{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.way_to_pay_wrap>div{
+	width: 90%;
+}
+
 
 }
 /*Content Animation*/
@@ -1324,4 +1460,16 @@ h5{
 	.photo{
 		width: 100%;
 	}
+	#content4 label.terms{
+		font-size: 18px;
+		margin-bottom: 20px;		
+	}
+	.pattern_one{
+	background: url(../img/dragonpattern1_s.png) top center repeat-x;
+	height: 235px;
+}
+.pattern_two{
+	background: url(../img/dragonpattern2_s.png) top center repeat-x;
+	height: 235px;
+}
 }
